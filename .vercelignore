@@ -1,0 +1,6 @@
+review-artifacts/
+.qa-*
+*.zip
+.env
+.env.*
+!.env.example

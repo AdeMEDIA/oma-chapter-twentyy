@@ -1,0 +1,18 @@
+.soundtrack-panel{position:fixed;right:22px;bottom:22px;z-index:50;width:min(290px,calc(100vw - 32px));padding:10px;background:#381e26;color:#f8ebd6;border:1px solid #b08b5980;border-radius:14px;box-shadow:0 16px 60px #24121b55}
+.soundtrack-heading{display:flex;justify-content:space-between;align-items:center;gap:8px;padding:1px 1px 8px}
+.soundtrack-heading>div{min-width:0}.soundtrack-heading span{display:block;font-size:7px;letter-spacing:1.4px;color:#cfb58f}.soundtrack-heading strong{display:block;font-family:var(--serif);font-size:22px;font-weight:400;margin-top:4px}.soundtrack-heading small{font-family:inherit;font-size:14px;color:#ddc9ad}
+.soundtrack-heading button{border:1px solid #b08b5960;border-radius:50%;background:transparent;color:inherit;width:36px;height:36px;flex-shrink:0;font-size:25px;line-height:1}
+.soundtrack-keepsake{min-height:70px;border:1px solid #b08b593b;background:radial-gradient(ellipse at top,#8c40502a,transparent),#2d1821;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:10px;gap:3px}.soundtrack-keepsake>span{font-family:var(--serif);font-size:28px;color:#d5b27a}.soundtrack-keepsake p{font-family:var(--serif);font-size:18px;color:#f0dcc0;margin:0}
+.soundtrack-controls{display:flex;align-items:center;gap:8px;margin-top:8px}.soundtrack-controls button{background:#f2e3cb;color:#591d32;border:0;border-radius:20px;min-width:72px;min-height:36px;font-size:11px;padding:7px 12px}.soundtrack-controls>span{font-size:10px;line-height:1.6;color:#ddc9ad}
+.soundtrack-panel button:focus-visible,.soundtrack-panel a:focus-visible{outline:2px solid #e6c78e;outline-offset:3px}
+.site-header .header-share.music-toggle{display:flex}
+.soundtrack-panel{animation:soundtrack-appear .18s ease-out both}
+@keyframes soundtrack-appear{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:translateY(0)}}
+@media(max-width:650px){.soundtrack-panel{right:16px;bottom:max(16px,env(safe-area-inset-bottom));}.soundtrack-heading span{font-size:6px;letter-spacing:1px}}
+
+/* Keep controls within reach on short landscape screens. */
+.soundtrack-panel{right:max(16px,env(safe-area-inset-right));bottom:max(16px,env(safe-area-inset-bottom));max-height:calc(100dvh - 32px - env(safe-area-inset-top) - env(safe-area-inset-bottom));overflow-y:auto;overscroll-behavior:contain;scrollbar-width:thin}
+.soundtrack-heading button{width:44px;height:44px}
+.soundtrack-controls button{min-height:44px}
+
+@media(max-height:480px){.soundtrack-panel{top:auto;bottom:max(8px,env(safe-area-inset-bottom));max-height:calc(100dvh - 96px - env(safe-area-inset-top) - env(safe-area-inset-bottom))}.soundtrack-heading{padding-bottom:6px}}

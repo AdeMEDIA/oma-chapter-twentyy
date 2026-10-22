@@ -1,0 +1,51 @@
+CURRENT STATUS: See RELEASE-CHECKLIST.md for the 21 October 2026 review and remaining birthday tasks.
+
+The import instructions below are archived and do not describe the current content.
+
+OMA / CHAPTER TWENTY — VERSION 4: ROOM HOMEPAGE + OMA’S CAKE
+
+INSTALL
+1. Back up your existing src folder.
+2. Extract this ZIP into a temporary folder.
+3. Copy the enclosed src folder into C:\Users\user\Projects\oma-chapter-twenty.
+   Replace matching files. Keep main.jsx unchanged.
+4. Copy the enclosed public folder into the SAME project folder.
+   Merge folders. Do not remove your existing images/audio/video folders.
+   This adds public/images/room/birthday-room.webp, which is required for the room.
+5. If your server is running, refresh. Otherwise run npm.cmd run dev.
+6. Open the Local URL. The room is now the homepage, including with no URL hash.
+   If an old hash is present, click the OMA wordmark or use /#/room.
+7. No new npm packages are required.
+
+CHANGES
+The realistic room artwork replaces the flat CSS sofa, furniture and objects.
+Titles, controls and animated glowing hotspots are real website elements.
+A blank frame is reserved for Oma's real portrait later.
+An in-room 100 Wishes for Oma link joins scrapbook, cake, letters, gift and film links.
+A larger scene can be explored horizontally on phones, with an accessible directory below.
+The scrapbook gets more textured paper and tape details.
+Other page interactions from version 2 are retained.
+
+PREVIEW LIMITS
+No personal photographs are included. All messages remain sample content.
+The room artwork is generated from the approved concept reference.
+Hotspot lights and UI animate; objects within the background photograph are not separate sprites yet.
+All pages remain open for testing. Real private access and public count gating are not implemented.
+X importing, moderation, live counts, real music and video remain future steps.
+The goal is 100 approved real wishes. Fictional demo wishes are labelled separately.
+
+PERSONALISE LATER
+src/data/birthday.js: portrait, song, film, gift, letters and scrapbook content.
+src/data/wishes.js: campaign post URL, goal and approved wishes.
+Journal text and note-discovery progress are saved only in this browser.
+
+VALIDATION
+Production build passed. Automated DOM interaction checks passed for all nine routes,
+room homepage, campaign link, filters, note dialogs, scrapbook navigation and photo flips,
+letters, cake celebration, saved wish, gift reveal and note progress.
+Visual browser checks still need to be completed on your laptop and phone.
+
+VERSION 4 ADDITION
+The cake photo now reads 20. It is used on the cake page, and the room cake matches its design.
+Both new images are included in public/images. Copy both src and public into the project.
+Her portrait and scrapbook photos remain empty. The room is still the default homepage.

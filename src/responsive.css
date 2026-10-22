@@ -1,0 +1,103 @@
+/* Shared screen, touch and reading refinements. The room artwork stays intact. */
+html{scrollbar-gutter:stable;-webkit-text-size-adjust:100%;text-size-adjust:100%}
+body{min-width:0}
+button,a,input,select,textarea{touch-action:manipulation}
+textarea:focus-visible,summary:focus-visible,[tabindex="0"]:focus-visible{outline:3px solid var(--gold);outline-offset:4px}
+main:focus{outline:none}
+.birthday-shell{max-width:1920px;margin-inline:auto;min-height:100svh}
+.birthday-nav>a,.birthday-nav button,.site-header nav>a,.header-share{min-height:44px;display:inline-flex;align-items:center;justify-content:center}
+.birthday-header,.site-header{gap:16px}
+.birthday-nav,.site-header nav{flex-wrap:wrap;justify-content:flex-end}
+.experience-breadcrumb{gap:16px;align-items:center}
+.experience-breadcrumb>a{display:inline-flex;align-items:center;min-height:44px}
+.experience-breadcrumb>span{text-align:right}
+.room-hotspot,.photographic-room .room-film-link,.scene-bottom>a{min-height:44px}
+.scene-bottom>a{display:inline-flex;align-items:center;padding-block:8px}
+.room-focused .room-directory{width:88%;max-width:1360px;margin-inline:auto}
+.room-directory>a,.portrait-copy,.wish-card{min-width:0}
+.room-directory h3,.wish-author strong,.dialog-paper h2{overflow-wrap:anywhere}
+.portrait-copy summary{min-height:44px;align-items:center}
+.notes-grid button>span:last-child{font-size:11px;line-height:1.6}
+.wish-dialog{max-height:calc(100dvh - 32px - env(safe-area-inset-top) - env(safe-area-inset-bottom));overscroll-behavior:contain;scrollbar-gutter:stable}
+.dialog-paper{padding-top:60px}
+.dialog-close{position:sticky;display:flex;align-items:center;justify-content:center;margin:-46px -10px 0 auto;top:8px;right:auto;width:44px;height:44px;z-index:2;border-radius:50%;background:#fff9edf5;font-size:23px;box-shadow:0 1px 8px #42232a0a}
+.letter-body{overflow-wrap:anywhere}
+.filter-tabs button,.search-field,.search-sort select,.load-button,.text-button,.journal-save{min-height:44px}
+.search-field:focus-within{outline:2px solid var(--gold);outline-offset:3px}
+.search-sort{min-width:0}
+.search-field{min-width:0}
+.search-field input{font-size:16px;width:min(230px,23vw)}
+.search-sort select{font-size:14px;max-width:150px}
+.wish-journal>div{flex-wrap:wrap}
+.skip-link{position:fixed;top:8px;left:12px;z-index:200;width:1px;height:1px;padding:0;border:0;clip-path:inset(50%);overflow:hidden;white-space:nowrap;background:var(--wine);color:#fff8ee;border-radius:8px}
+.skip-link:focus{width:auto;height:auto;padding:14px 20px;border:1px solid var(--gold);clip-path:none}
+.page-loading{min-height:50svh;display:grid;place-items:center;padding:40px;font-family:var(--serif);font-size:30px;color:var(--wine)}
+/* Keep the beacon glow static; animate opacity without repainting shadows. */
+@keyframes gentle-beacon{0%,100%{opacity:.65}50%{opacity:1}}
+@media(max-width:1000px){
+  .room-focused .birthday-header{position:relative;background:#381e26;padding:16px max(6%,env(safe-area-inset-right)) 16px max(6%,env(safe-area-inset-left));color:#f5e4ca}
+  .room-stage.photographic-room{width:100%;max-width:none}
+  .scene-title{left:50%}
+  .room-wishes-link{top:20%;right:3%;padding:10px;gap:8px}
+  .room-wishes-link>span:nth-child(2){font-size:16px}
+  .photographic-room .room-film-link{top:35%;font-size:14px}
+  .room-hotspot{font-size:15px;padding:10px 14px}
+}
+@media(max-width:750px){
+  .room-stage.photographic-room{width:900px}
+  .mobile-pan-tip{display:block;margin-top:5px;line-height:1.7}
+}
+@media(min-width:651px) and (max-width:850px){
+  .notes-grid{grid-template-columns:repeat(3,minmax(0,1fr))}
+  .portrait-page{gap:28px}
+  .portrait-copy h1{font-size:58px}
+  .hero{grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:12px}
+  .hero-art{transform:scale(.8);transform-origin:center}
+  .hero-subtitle{font-size:14px}
+}
+@media(max-width:650px){
+  .birthday-header,.site-header{margin-inline:max(5%,env(safe-area-inset-left));gap:10px}
+  .birthday-nav{gap:8px;font-size:11px}
+  .birthday-nav button{font-size:11px;padding-inline:12px}
+  .room-stage.photographic-room{width:900px}
+  .room-wishes-link{top:20%;right:3%;padding:12px;gap:9px}
+  .room-wishes-link>span:nth-child(2){font-size:18px}
+  .room-hotspot{font-size:14px}
+  .scene-bottom>a{font-size:14px}
+  .scene-bottom{bottom:3%}
+  .site-header nav{gap:10px;font-size:11px}
+  .site-header nav>a:first-child{font-size:11px}
+  .site-header nav>a:not(:first-child){display:none}
+  .site-header .header-share.music-toggle{font-size:11px;min-width:94px}
+  .experience-breadcrumb{margin-block:12px;font-size:11px}
+  .experience-title h1{font-size:clamp(42px,10vw,56px)}
+  .experience-title p,.room-directory-heading p{font-size:13px}
+  .room-instruction .mobile-pan-tip{font-size:11px}
+  .room-directory p{font-size:12px}
+  .room-directory>a{gap:12px}
+  .wish-author strong{font-size:12px}
+  .wish-author small,.result-count{font-size:11px}
+  .filter-tabs button{font-size:12px;padding-inline:10px}
+  .search-field input{width:100%;font-size:16px}
+  .search-sort select{font-size:16px;width:132px;max-width:42%;padding-left:4px}
+  .dialog-paper{padding:60px 24px 28px}
+  .letter-body{font-size:23px;line-height:1.55}
+  .birthday-footer,.site-footer{padding-bottom:max(25px,env(safe-area-inset-bottom));font-size:10px}
+  .birthday-footer a{display:inline-flex;align-items:center;min-height:44px}
+}
+@media(max-width:360px){
+  .birthday-header .wordmark,.site-header .wordmark{font-size:23px;letter-spacing:3px}
+  .wordmark span{font-size:6px;letter-spacing:1.5px}
+  .birthday-nav>a{max-width:75px;line-height:1.5;text-align:center}
+  .birthday-nav{gap:6px}
+  .site-header nav{gap:8px}
+  .site-header .header-share.music-toggle{padding-inline:9px;min-width:88px}
+  .filter-tabs button{font-size:11px;padding-inline:8px}
+  .portrait-copy summary{font-size:22px}
+  .wish-journal{padding:18px}
+}
+@media(pointer:coarse){
+  .primary-button:hover,.wish-card:hover{transform:none}
+  .notes-grid button:hover{transform:rotate(-2deg)}
+  .notes-grid button:nth-child(even):hover{transform:rotate(2deg)}
+}
