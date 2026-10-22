@@ -1,6 +1,6 @@
 # Birthday review — updated 22 October 2026
 
-The scrapbook’s six chapters are filled with Ade’s supplied photos and short personal notes. The latest wording review removes extra slogans and sentence fragments across the pages, letters, notes and scrapbook. The scrapbook’s fixed dimensions and interactions, realistic room artwork and cake placement are preserved. Nothing has been published.
+The scrapbook’s six chapters contain Ade’s supplied photos and chapter titles, with the added descriptions removed. The scrapbook’s fixed dimensions and page turns, realistic room artwork and cake placement are preserved. The website is now deployed at https://oma-chapter-twenty.vercel.app; custom-domain DNS setup is pending.
 
 ## Finished presentation
 
@@ -20,7 +20,7 @@ The scrapbook’s six chapters are filled with Ade’s supplied photos and short
 1. **Film title review:** the supplied MP4’s opening card says “Chapter Nineteen.” This is embedded in the video and has been preserved. Correcting it requires a revised video export.
 2. **X post link — deferred by Ade:** `campaign.postUrl` is empty. No broken posting/sharing buttons are displayed.
 3. **Gift reveal — deferred by Ade:** title/details are empty. Its hotspot and directory entry stay hidden until supplied; its room artwork remains intact. A direct empty gift route returns to the room.
-4. **Deployment:** not published. Vercel hosting and connecting `sylverat20.com.ng` at WhoGoHost are planned after the remaining content is finished. A wish-count gate is no longer part of the project. Private access has not been implemented.
+4. **Custom-domain DNS:** the website is deployed on Vercel and `sylverat20.com.ng` is attached to the project. WhoGoHost still needs the Vercel nameservers or the recommended DNS records. A wish-count gate is no longer part of the project. Private access has not been implemented.
 
 The birthday journal and discovered-note progress are saved only in the current browser. They are not sent to Ade or a server.
 
@@ -64,3 +64,10 @@ The birthday journal and discovered-note progress are saved only in the current 
 - Restored the room directory descriptions after Ade clarified that the removal applies to the scrapbook only.
 - Scrapbook pages now contain the existing chapter titles and photos, without captions, slogans, handwritten descriptions or reverse-side notes. Photos no longer present an empty note-flip control. Image descriptions remain available to screen readers.
 - Kept the cover branding, page navigation, animations and fixed book dimensions. All six chapters passed browser checks at 320, 390, 768 and 1440 pixels, along with keyboard and animated page turns. Build and lint pass. Screenshots and results: `review-artifacts/scrapbook-titles-only-*`.
+
+## Deployment — 22 October
+
+- Uploaded the complete project to `https://github.com/AdeMEDIA/oma-chapter-twentyy`, branch `main`. The repository is currently public. Review artifacts, dependencies, local environment files and generated builds are excluded from Git.
+- Deployed production to `https://oma-chapter-twenty.vercel.app` on the `adepoju-abdullahis-projects` Hobby team. Connected the GitHub repository for future deployments.
+- Attached `sylverat20.com.ng`. Vercel confirms ownership but reports invalid DNS configuration. Current nameservers are `nsc.go54.com` and `nsd.go54.com`; intended nameservers are `ns1.vercel-dns.com` and `ns2.vercel-dns.com`. Registrar action is pending.
+- Verified the public site without Vercel authentication. Sixteen phone/desktop route checks passed, including all six scrapbook chapters, all ten wishes, the film’s original dimensions and unmuted metadata, and partial loading of the supplied MP3. No page errors or broken photos occurred. Evidence: `review-artifacts/vercel-live-report.json` and `review-artifacts/vercel-live-room-*.png`.

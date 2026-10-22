@@ -2,6 +2,11 @@
 
 Ade’s twentieth-birthday website for Oma, built with React and Vite. The birthday room is the homepage. Photos, Orente and the birthday film are served from `public/`.
 
+- Live website: https://oma-chapter-twenty.vercel.app
+- GitHub: https://github.com/AdeMEDIA/oma-chapter-twentyy
+- Custom domain: `sylverat20.com.ng`, attached in Vercel; registrar DNS setup is pending as of 22 October 2026.
+- Vercel project: `adepoju-abdullahis-projects/oma-chapter-twenty` on the Hobby plan, connected to the repository’s `main` branch.
+
 ## Run locally
 
 ```powershell
@@ -24,7 +29,7 @@ npm.cmd run preview
 3. Use the **Vite** preset, project root `./`, build command `npm run build`, and output directory `dist`. No environment variables are required.
 4. Deploy, then check the Vercel URL, room links, photos, sound and film.
 5. Under **Settings → Domains**, add `sylverat20.com.ng` and optionally `www.sylverat20.com.ng`.
-6. At WhoGoHost, enter the exact DNS records displayed by Vercel. Keep existing unrelated mail/DNS records. Wait for Vercel to confirm the domain and HTTPS certificate.
+6. At WhoGoHost, use the domain’s Nameservers page to set `ns1.vercel-dns.com` and `ns2.vercel-dns.com`, as confirmed for this domain by Vercel. Alternatively, keep the registrar’s nameservers and enter the exact DNS records displayed by Vercel. Use one method, then wait for Vercel to confirm the domain and HTTPS certificate.
 
 GitHub holds the source and Vercel hosts the website. Future pushes to the connected production branch trigger deployment. GitHub is optional if deploying with the Vercel CLI instead.
 
