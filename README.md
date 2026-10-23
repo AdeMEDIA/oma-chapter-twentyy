@@ -34,9 +34,20 @@ The app uses hash routes such as /#/scrapbook; no catch-all rewrite is needed. S
 - src/components/BirthdayRoom.jsx and src/room-fit.css: the original labelled room with responsive positions.
 - src/components/Soundtrack.jsx: one persistent Orente player; dismissing the panel does not stop the song.
 
-The welcome screen starts music only after an explicit choice and remembers the introduction for the browsing session. Audio position survives internal navigation. The film keeps its original audio, independently controlled as requested.
+The welcome screen starts music only after an explicit choice and remembers the introduction for the browsing session. Its 2.6-second door opening has a short fade alternative for reduced motion. Audio position survives internal navigation. The player stays minimized until opened; dismissing it keeps Orente playing. Phones and tablets reserve a small safe-area music dock so the circular control cannot cover page actions; desktop uses one Orente control in the header. The film keeps its original audio, independently controlled as requested.
 
-Wish-journal entries and note progress stay in the visitor's browser. The deferred gift and X-post controls stay hidden while their data is empty. The three scrapbook photo slots are intentionally reserved for later uploads.
+Wish-journal entries and note progress stay in the visitor's browser. The deferred gift and X-post controls stay hidden while their data is empty. All ten scrapbook photograph slots are filled; original uploads are retained alongside responsive derivatives.
+
+## Entrance release and recovery
+
+The complete pre-entrance project, including the latest scrapbook photos and captions, is saved at `backup/pre-final-entrance-2026-10-23` (`e8e0d59`). The entrance update is tagged `release/final-entrance-2026-10-23`. To undo only that update while retaining the scrapbook:
+
+```powershell
+git revert release/final-entrance-2026-10-23
+git push origin main
+```
+
+This creates a normal recovery commit; it does not reset or rewrite history. The local verification record is in `review-artifacts/final-entrance/`: 880 Chromium/WebKit checks plus 27 integration checks cover music, welcome, responsive layouts, keyboard controls, resize continuity, letters, notes, cake and film. No physical iPhone or Android test is claimed.
 
 All original media is retained. The supplied film's embedded Chapter Nineteen opening card requires a revised video export to change; CSS does not remove embedded bars or crop faces. See FILM.md, SOUNDTRACK.md and SCRAPBOOK-REVIEW.md.
 

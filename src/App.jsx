@@ -23,7 +23,7 @@ function currentRoute(hash) {
 function ExperienceRouter() {
   const [hash, setHash] = useState(() => window.location.hash);
   const route = currentRoute(hash);
-  const { introComplete } = useSoundtrack();
+  const { introComplete, entrancePhase } = useSoundtrack();
   const experience = useRef(null);
   useExperienceMotion(experience, route, hash, introComplete);
   useEffect(() => {
@@ -34,7 +34,7 @@ function ExperienceRouter() {
   useEffect(() => {
     document.title = `${pageTitles[route]} | Chapter Twenty`;
   }, [route]);
-  return <div ref={experience} className={`cinematic-app ${introComplete ? 'is-entered' : ''}`} inert={!introComplete} data-route={route}><button className="skip-link" onClick={() => { const main = document.querySelector('main'); main?.focus(); main?.scrollIntoView({ behavior: 'instant' }); }}>Skip to content</button><Suspense fallback={<div className="page-loading" role="status">Opening…</div>}>{route === 'wishes' ? <WishesPage /> : <BirthdayExperience route={route} />}</Suspense></div>;
+  return <div ref={experience} className={`cinematic-app ${introComplete ? 'is-entered' : ''}`} inert={!introComplete} data-route={route} data-entrance={entrancePhase}><button className="skip-link" onClick={() => { const main = document.querySelector('main'); main?.focus(); main?.scrollIntoView({ behavior: 'instant' }); }}>Skip to content</button><Suspense fallback={<div className="page-loading" role="status">Opening…</div>}>{route === 'wishes' ? <WishesPage /> : <BirthdayExperience route={route} />}</Suspense></div>;
 }
 
 export default function App() { return <SoundtrackProvider><ExperienceRouter /></SoundtrackProvider>; }

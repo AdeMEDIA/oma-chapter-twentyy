@@ -1,0 +1,100 @@
+/* Entrance enhancements preserve the restored room's artwork and geometry.
+   The provider sets `entering` only for the visitor's welcome choice, so
+   ordinary navigation never replays this sequence. */
+.birthday-room--restored .room-entrance-light {
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  pointer-events: none;
+  opacity: 0;
+  background:
+    radial-gradient(ellipse at 14% 29%, #ffd59840, transparent 43%),
+    radial-gradient(ellipse at 62% 70%, #eecfa71a, transparent 54%);
+}
+
+.cinematic-app[data-entrance='entering'] .birthday-room--restored .room-entrance-light {
+  animation: room-entrance-warmth 2600ms cubic-bezier(.22, .7, .25, 1) both;
+  will-change: opacity;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .cinematic-app[data-entrance='entering'] .birthday-room--restored .room-scene-canvas {
+    transform-origin: 50% 55%;
+    animation: room-entrance-camera 2600ms cubic-bezier(.2, .65, .25, 1) both;
+    will-change: transform;
+  }
+
+  .cinematic-app[data-entrance='entering'] .birthday-room--restored .scene-title > * {
+    animation: room-entrance-content 1100ms cubic-bezier(.2, .65, .25, 1) both;
+    animation-delay: 580ms;
+  }
+  .cinematic-app[data-entrance='entering'] .birthday-room--restored .scene-title h1 {
+    animation-delay: 740ms;
+  }
+  .cinematic-app[data-entrance='entering'] .birthday-room--restored .scene-title p {
+    animation-delay: 900ms;
+  }
+
+  .cinematic-app[data-entrance='entering'] .birthday-room--restored .room-scene-labels > * {
+    --room-entrance-delay: 1050ms;
+  }
+  .cinematic-app[data-entrance='entering'] .birthday-room--restored .spot-portrait { --room-entrance-delay: 850ms; }
+  .cinematic-app[data-entrance='entering'] .birthday-room--restored .spot-record { --room-entrance-delay: 950ms; }
+  .cinematic-app[data-entrance='entering'] .birthday-room--restored .spot-letters { --room-entrance-delay: 1050ms; }
+  .cinematic-app[data-entrance='entering'] .birthday-room--restored .spot-book { --room-entrance-delay: 1150ms; }
+  .cinematic-app[data-entrance='entering'] .birthday-room--restored .spot-cake { --room-entrance-delay: 1250ms; }
+  .cinematic-app[data-entrance='entering'] .birthday-room--restored .spot-gift { --room-entrance-delay: 1350ms; }
+  .cinematic-app[data-entrance='entering'] .birthday-room--restored .room-film-link { --room-entrance-delay: 1450ms; }
+  .cinematic-app[data-entrance='entering'] .birthday-room--restored .room-wishes-link { --room-entrance-delay: 1550ms; }
+
+  /* Animate contents, never the labels' positioning transforms. */
+  .cinematic-app[data-entrance='entering'] .birthday-room--restored .hotspot-caption,
+  .cinematic-app[data-entrance='entering'] .birthday-room--restored .room-film-link > span,
+  .cinematic-app[data-entrance='entering'] .birthday-room--restored .room-wishes-link > span,
+  .cinematic-app[data-entrance='entering'] .birthday-room--restored .room-wishes-link > svg {
+    animation: room-entrance-content 850ms cubic-bezier(.2, .65, .25, 1) both;
+    animation-delay: var(--room-entrance-delay, 1050ms);
+  }
+  .cinematic-app[data-entrance='entering'] .birthday-room--restored .hotspot-dot {
+    animation: room-entrance-highlight 1000ms ease both;
+    animation-delay: var(--room-entrance-delay, 1050ms);
+  }
+
+  .cinematic-app[data-entrance='entering'] .birthday-room--restored .scene-bottom > * {
+    animation: room-entrance-content 850ms cubic-bezier(.2, .65, .25, 1) 1550ms both;
+  }
+}
+
+/* Keep touch feedback quiet and avoid moving the original hotspots. */
+.birthday-room--restored .room-hotspot:active,
+.birthday-room--restored .room-film-link:active,
+.birthday-room--restored .room-wishes-link:active {
+  background-color: #553426eb;
+  border-color: #e7c58f;
+}
+
+@keyframes room-entrance-camera {
+  from { transform: scale(.985); }
+  to { transform: scale(1); }
+}
+@keyframes room-entrance-warmth {
+  0% { opacity: 0; }
+  55% { opacity: .72; }
+  100% { opacity: 0; }
+}
+@keyframes room-entrance-content {
+  from { opacity: 0; transform: translate3d(0, 6px, 0); }
+  to { opacity: 1; transform: translate3d(0, 0, 0); }
+}
+@keyframes room-entrance-highlight {
+  0% { opacity: .28; transform: scale(.85); }
+  55% { opacity: 1; transform: scale(1.15); }
+  100% { opacity: 1; transform: scale(1); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .cinematic-app[data-entrance='entering'] .birthday-room--restored .room-entrance-light {
+    animation: none;
+    opacity: .18;
+  }
+}

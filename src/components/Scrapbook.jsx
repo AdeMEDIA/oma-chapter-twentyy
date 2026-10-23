@@ -2,6 +2,7 @@ import { useCallback, useEffect, useRef, useState } from 'react';
 import { spreads } from '../data/birthday';
 import Icon from './Icon';
 import ResponsiveImage from './ResponsiveImage';
+import { pageViewportBottom } from './page-scroll';
 import './scrapbook.css';
 
 const NOTICE_KEY = 'oma-scrapbook-viewing-note-v1';
@@ -123,7 +124,7 @@ export default function Scrapbook() {
     element?.focus({ preventScroll: true });
     if (mobile && element) {
       const bounds = element.getBoundingClientRect();
-      if (bounds.top < 12 || bounds.bottom > window.innerHeight - 12) element.scrollIntoView({ block: 'center', behavior: reducedMotion ? 'instant' : 'smooth' });
+      if (bounds.top < 12 || bounds.bottom > pageViewportBottom() - 12) element.scrollIntoView({ block: 'center', behavior: reducedMotion ? 'instant' : 'smooth' });
     }
   }
   function openBook() {

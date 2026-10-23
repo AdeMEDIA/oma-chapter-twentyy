@@ -1,4 +1,5 @@
 import { useEffect, useRef } from 'react';
+import { scrollPageTo } from './page-scroll';
 
 // Only observe elements that opt in. Reveals stop observing once completed;
 // pointer parallax and audio playback have separate, event-driven lifecycles.
@@ -34,7 +35,7 @@ export function useExperienceMotion(rootRef, route, hash, introComplete) {
       if (!mainHandled && main) {
         mainHandled = true;
         if (routeChanged && !anchor) {
-          window.scrollTo({ top: 0, behavior: 'instant' });
+          scrollPageTo(0);
           main.focus({ preventScroll: true });
         }
         if (routeChanged && route !== 'room' && !motion.matches && main.animate) {

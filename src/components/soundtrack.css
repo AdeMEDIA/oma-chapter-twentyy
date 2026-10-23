@@ -18,3 +18,29 @@
 @media(max-width:650px){.soundtrack-panel{right:max(16px,env(safe-area-inset-right));bottom:max(16px,env(safe-area-inset-bottom));padding:18px}.soundtrack-launcher{right:max(16px,env(safe-area-inset-right));bottom:max(16px,env(safe-area-inset-bottom))}}
 @media(max-height:420px){.soundtrack-panel{bottom:max(8px,env(safe-area-inset-bottom));padding:14px 18px}.soundtrack-controls{margin-top:12px;padding-top:12px}.soundtrack-volume{margin-top:2px}}
 @media(prefers-reduced-motion:reduce){.soundtrack-panel{animation:none}.soundtrack-panel button,.soundtrack-launcher{transition:none}.soundtrack-launcher:hover,.soundtrack-play:hover{transform:none}}
+
+/* One shared player; the dock reserves real space instead of covering a page. */
+.experience-scroll{display:contents}
+.cinematic-app[data-entrance=entering]{opacity:1;transition:none}
+.soundtrack-dock{display:none}
+.soundtrack-panel{inset:auto max(20px,env(safe-area-inset-right)) max(20px,env(safe-area-inset-bottom)) auto;margin:0}
+.soundtrack-panel::backdrop{background:#24101a26}
+.soundtrack-hint,.soundtrack-device-volume{font-size:10px;line-height:1.65;color:#d5baa7;margin:13px 0 0}
+.soundtrack-hint{padding-top:12px;border-top:1px solid #caa87826}
+.birthday-nav .header-audio .header-orente,.site-header .header-audio .header-orente{width:auto;min-width:112px;padding:10px 16px;border-radius:40px;gap:9px}
+.header-orente>i{width:5px;height:5px;flex-shrink:0;border-radius:50%;background:#a58c7b}
+.header-orente.is-playing>i{background:#c39a60;box-shadow:0 0 0 3px #caa87821}
+@media(max-width:1000px){
+  html,body,#root{height:100%;overflow:hidden}
+  html{scrollbar-gutter:auto}
+  .experience-scroll{display:block;height:calc(100dvh - 72px - env(safe-area-inset-bottom));overflow-x:hidden;overflow-y:auto;overscroll-behavior-y:contain;scroll-padding:12px;}
+  .experience-scroll .header-audio{display:none}
+  .soundtrack-dock{position:fixed;inset:auto 0 0;z-index:65;display:flex;align-items:flex-start;justify-content:flex-end;height:calc(72px + env(safe-area-inset-bottom));padding:11px max(16px,env(safe-area-inset-right)) calc(12px + env(safe-area-inset-bottom)) max(16px,env(safe-area-inset-left));border-top:1px solid #c6a77538;background:linear-gradient(90deg,#fbf6ed,#f6ead8)}
+  .soundtrack-dock .soundtrack-launcher{position:relative;inset:auto;display:flex;align-items:center;justify-content:center;width:48px;height:48px;min-height:48px;padding:0;border-radius:50%;isolation:isolate}
+  .soundtrack-dock .soundtrack-launcher>span{display:none}
+  .soundtrack-dock .soundtrack-launcher>i{position:absolute;top:8px;right:8px;width:4px;height:4px;margin:0}
+  .soundtrack-launcher.is-playing::before{content:'';position:absolute;inset:-4px;z-index:-1;border:1px solid #b78c5366;border-radius:inherit;animation:orente-breath 3.8s ease-in-out infinite;pointer-events:none}
+  .soundtrack-panel{inset:auto max(16px,env(safe-area-inset-right)) calc(80px + env(safe-area-inset-bottom)) auto;max-height:calc(100dvh - 100px - env(safe-area-inset-top) - env(safe-area-inset-bottom))}
+}
+@keyframes orente-breath{0%,100%{opacity:.25;transform:scale(.98)}50%{opacity:.7;transform:scale(1.07)}}
+@media(prefers-reduced-motion:reduce){.soundtrack-launcher.is-playing::before{animation:none;opacity:.45}}

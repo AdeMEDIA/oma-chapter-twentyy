@@ -4,6 +4,7 @@ import Icon from './Icon';
 import ResponsiveImage from './ResponsiveImage';
 import { useSoundtrack } from './soundtrack-context';
 import './room-experience.css';
+import './room-entrance.css';
 
 const destinations = [
   { path: 'scrapbook', title: 'The scrapbook', subtitle: 'Look through our photos', icon: 'book' },
@@ -23,7 +24,7 @@ function RoomLabel({ spot, path, label, children }) {
 }
 
 export default function BirthdayRoom({ foundCount = 0 }) {
-  const { music, loading, toggleMusic } = useSoundtrack();
+  const { music, loading, openPlayer, playerOpen } = useSoundtrack();
   const notesFound = Math.min(20, Math.max(0, Number(foundCount) || 0));
   const roomDestinations = destinations.filter(item => item.path !== 'gift' || birthday.giftDetail);
   return <div className="birthday-room birthday-room--restored">
@@ -32,11 +33,12 @@ export default function BirthdayRoom({ foundCount = 0 }) {
         <div className="room-scene-canvas">
           <ResponsiveImage className="room-background" src="/images/room/birthday-room.webp" sizes="100vw" alt="A warmly lit birthday room with a burgundy sofa, a scrapbook, letters, a cake and a wrapped gift on a wooden table." width="1672" height="941" fetchPriority="high" decoding="async" />
           <div className="room-shade" aria-hidden="true" />
+          <div className="room-entrance-light" aria-hidden="true" />
           <div className="scene-title"><span>OMA</span><h1>CHAPTER TWENTY</h1><p>One in a Million</p></div>
           {birthday.portrait && <div className="scene-portrait-frame"><ResponsiveImage className="scene-portrait-photo" src={birthday.portrait} sizes="7vw" alt="Oma’s framed portrait" width="960" height="1280" decoding="async" /></div>}
           <nav className="room-scene-labels" aria-label="Explore the objects in your birthday room">
             <RoomLabel spot="portrait" path="portrait" label="Open Through Ade’s eyes">Through Ade’s eyes</RoomLabel>
-            <button type="button" className={'room-object room-hotspot spot-record' + (music ? ' playing' : '')} onClick={toggleMusic} aria-label={music || loading ? 'Pause Orente' : 'Play Orente'} aria-pressed={music} aria-busy={loading}><span className="hotspot-dot" aria-hidden="true" /><span className="hotspot-caption">Orente</span></button>
+            <button type="button" className={'room-object room-hotspot spot-record' + (music ? ' playing' : '')} onClick={openPlayer} aria-label="Open Orente music player" aria-expanded={playerOpen} aria-haspopup="dialog" aria-busy={loading}><span className="hotspot-dot" aria-hidden="true" /><span className="hotspot-caption">Orente</span></button>
             <RoomLabel spot="book" path="scrapbook" label="Open the scrapbook">The scrapbook</RoomLabel>
             <RoomLabel spot="letters" path="letters" label="Open letters for you">Letters for you</RoomLabel>
             <RoomLabel spot="cake" path="cake" label="Make a birthday wish">Make a wish</RoomLabel>
