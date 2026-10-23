@@ -1,0 +1,12 @@
+.cake-page{position:relative;isolation:isolate}
+.candle-celebration{position:absolute;top:220px;left:50%;transform:translateX(-50%);width:min(620px,100%);height:330px;overflow:clip;pointer-events:none;z-index:4}
+.celebration-light{position:absolute;top:25px;left:50%;width:300px;height:220px;transform:translateX(-50%);border-radius:50%;background:radial-gradient(ellipse,#dfba6b35,transparent 68%);opacity:0;animation:celebration-glow 1.2s ease-out both}
+.celebration-fleck{position:absolute;top:57%;left:50%;display:block;width:5px;height:10px;border-radius:1px;background:#b48a48;opacity:0;animation:candle-fleck-flight 1.1s cubic-bezier(.12,.45,.3,1) both;animation-delay:var(--fleck-delay)}
+.celebration-fleck.fleck-0{width:15px;height:15px;background:transparent;color:#ac7d37}
+.celebration-fleck.fleck-1{background:#9d5264}
+.celebration-fleck.fleck-2{width:4px;height:4px;border-radius:50%;background:#c6a367}
+.celebration-fleck svg{display:block;width:100%;height:100%}
+@keyframes candle-fleck-flight{0%{opacity:0;transform:translate(-50%,0) rotate(0) scale(.4)}15%{opacity:.8}80%{opacity:.45}100%{opacity:0;transform:translate(calc(-50% + var(--fleck-x)),var(--fleck-y)) rotate(var(--fleck-rotation)) scale(1)}}
+@keyframes celebration-glow{0%{opacity:0;scale:.85}25%{opacity:1}100%{opacity:0;scale:1.12}}
+@media(max-width:650px){.candle-celebration{top:180px;height:300px}.celebration-light{width:240px}}
+@media(prefers-reduced-motion:reduce){.candle-celebration{display:none}}

@@ -1,0 +1,198 @@
+/* Quiet paper surfaces and readable details for the rooms beyond the landing scene. */
+.letters-page,.notes-page{padding-bottom:20px}
+.letters-page .experience-title,.notes-page .experience-title,.cake-page .experience-title{max-width:760px;margin-inline:auto}
+.letters-page .experience-title p,.notes-page .experience-title p,.cake-page .experience-title p{max-width:440px;margin-inline:auto;color:#715b50;font-size:14px;line-height:1.85;text-wrap:pretty}
+.letters-page .letter-grid{max-width:1040px;gap:24px;padding-inline:30px}
+.letter-grid .letter-envelope{min-height:292px;padding:36px 30px 28px;border-color:#d8c5a9;border-radius:5px;background:linear-gradient(151deg,transparent 49.7%,#c7b08c4d 50%,#fffdf340 50.3%),linear-gradient(29deg,#f8efdf 49.8%,#e8d8bd80 50%,#fbf4e7 50.4%);box-shadow:0 2px 3px #54331c05,0 12px 28px -16px #54331c26;overflow:hidden;transition:transform .3s,box-shadow .3s,border-color .3s}
+.letter-grid .envelope-number{top:20px;left:22px;color:#8a6a46;font-size:17px}
+.letter-grid .letter-seal{width:51px;height:51px;line-height:45px;background:radial-gradient(ellipse at 35% 25%,#943b51,#692139);border-color:#c5a16d;box-shadow:0 2px 5px #53233325,inset 0 0 0 2px #4d162333;margin-bottom:22px}
+.letter-grid h2{font-size:34px;line-height:1.05;max-width:310px;margin-inline:auto;text-wrap:balance}
+.letter-grid .letter-envelope p{font-size:12px;line-height:1.65;color:#7e634b;margin-top:14px}
+.letter-grid .letter-open{display:inline-flex;align-items:center;justify-content:center;gap:9px;margin-top:22px;font-size:12px;line-height:1.6;color:#77364a}
+.letter-grid .letter-open svg{width:15px;height:15px}
+.letter-grid .letter-envelope:focus-visible{outline:3px solid #ad8649;outline-offset:5px}
+.portrait-page{max-width:1080px;grid-template-columns:minmax(0,.95fr) minmax(0,1fr);gap:clamp(32px,5vw,74px);margin-block:45px 65px;align-items:start}
+.portrait-page .large-portrait{margin-top:22px;border-color:#a88752;background:#fff8ec;box-shadow:0 3px 6px #5330190a,0 17px 34px -14px #53301940}
+.portrait-page .large-portrait img{height:auto;aspect-ratio:3/4;object-fit:contain;background:#f0e6d5}
+.portrait-copy h1{font-size:clamp(55px,5.7vw,74px);text-wrap:balance}
+.portrait-page .portrait-copy>p{max-width:350px;font-size:14px;line-height:1.85;color:#715b50;margin-bottom:24px}
+.portrait-copy details{padding:15px 0;border-color:#d9c8b1}
+.portrait-copy details:last-child{border-bottom:1px solid #d9c8b1}
+.portrait-copy summary{min-height:48px;gap:14px;font-size:26px;line-height:1.15;color:#69333f;border-radius:3px}
+.portrait-copy summary>span:first-child{font-family:'DM Sans',Arial,sans-serif;font-size:10px;font-variant-numeric:tabular-nums;letter-spacing:1px;color:#8a6a46;flex-shrink:0}
+.portrait-copy summary>span:last-child{display:flex;align-items:center;justify-content:center;flex-shrink:0;width:25px;height:25px;color:#8a6a46;transition:transform .25s}
+.portrait-copy details[open] summary>span:last-child{transform:rotate(45deg)}
+.portrait-copy details p{font-size:14px;line-height:1.9;color:#715b50;margin:13px 0 5px;padding-left:27px;max-width:440px;text-wrap:pretty}
+.portrait-copy details[open] p{animation:section-paper-in .3s ease both}
+.cake-page .birthday-cake.photo-cake{padding:13px;border-color:#d8c5a9;border-radius:7px;background:#fffbf2;box-shadow:0 4px 8px #67442308,0 22px 45px -22px #67442340;margin-block:44px 30px}
+.cake-page .photo-cake figcaption{font-size:23px;line-height:1.3;color:#7b4c43;padding-inline:7px;margin-block:17px 7px;text-wrap:balance}
+.cake-page .photo-candle{border-color:#a88455;box-shadow:inset 1px 0 0 #fff6d980}
+.cake-page .photo-candle i{transform-origin:center bottom;box-shadow:0 0 9px #f8ca7077,0 0 22px #f8ca7033;transition:opacity .18s ease-out,scale .18s ease-out}
+.cake-page .candles-out .photo-candle i{scale:.3;opacity:0}
+.cake-page .photo-cake.candles-out .photo-candle::before{animation:section-candle-smoke 1.15s ease-out both;transform-origin:center bottom}
+.cake-page>.primary-button{min-height:48px;font-size:13px;padding:15px 24px;gap:10px}
+.cake-page .birthday-celebration>span{display:inline-flex;align-items:center;gap:16px;letter-spacing:0;color:#a57d3e}
+.cake-page .birthday-celebration>p{font-size:31px;line-height:1.25;margin-block:14px 9px}
+.cake-page .birthday-celebration .text-button{font-size:12px;min-height:44px}
+.cake-page .wish-journal{position:relative;max-width:640px;margin-top:44px;padding:30px;border-color:#d8c5a9;border-radius:6px;background:linear-gradient(120deg,#fffdf7,#fcf4e5);box-shadow:0 3px 6px #67442304,0 18px 35px -24px #67442333}
+.wish-journal>label{font-size:31px;line-height:1.2;margin-bottom:20px}
+.wish-journal textarea{min-height:156px;border-color:#d8c5a9;background:#fffaf0;padding:17px;font-size:24px;line-height:1.55;border-radius:4px;color:#533b37;transition:border-color .2s,box-shadow .2s}
+.wish-journal textarea::placeholder{color:#8b7461;opacity:1}
+.wish-journal textarea:focus-visible{outline:2px solid #ad8649;outline-offset:3px;border-color:#ad8649}
+.wish-journal>div{gap:10px 18px;margin-top:18px}
+.wish-journal .journal-save{min-height:46px;padding:12px 20px;font-size:12px}
+.wish-journal .text-button{min-height:44px;font-size:12px}
+.wish-journal .text-button:disabled{opacity:.45;cursor:default}
+.wish-journal>small{font-size:11px;line-height:1.75;color:#79604b;margin-top:18px}
+.wish-journal>p{font-size:12px;line-height:1.75;color:#684131;margin-top:9px}
+.wish-journal>p:empty{margin:0}
+.notes-page .notes-grid{max-width:1060px;gap:20px;padding-inline:30px;grid-template-columns:repeat(5,minmax(0,1fr))}
+.notes-grid button{position:relative;min-height:150px;padding:21px;border-color:#d8c5a9;border-radius:3px;background:linear-gradient(150deg,#fffaf0,#f4e6cf);box-shadow:0 2px 2px #68412104,0 10px 18px -11px #68412126;transition:transform .25s,box-shadow .25s,border-color .25s,background .25s}
+.notes-grid button:nth-child(even){background:linear-gradient(150deg,#fffcf5,#f7eddc)}
+.notes-grid button.note-found{background:linear-gradient(145deg,#f9eced,#f0dee1);border-color:#c7a3ab}
+.notes-grid button.note-found::after{content:'';position:absolute;top:15px;right:15px;width:5px;height:5px;border-radius:50%;background:#96546b}
+.notes-grid button>span:first-child{font-size:42px;line-height:1;color:#87613d;font-variant-numeric:tabular-nums}
+.notes-grid button.note-found>span:first-child{color:#793a50}
+.notes-grid button>span:last-child{display:flex;align-items:center;gap:6px;font-size:11px;line-height:1.5;color:#765c46;margin-top:24px}
+.notes-grid button>span:last-child svg{width:14px;height:14px;flex-shrink:0}
+.notes-grid button:focus-visible{outline:3px solid #ad8649;outline-offset:5px}
+/* Wishes remain generous enough to read as complete personal messages. */
+.site-shell .hero-subtitle{font-size:15px;line-height:1.9;color:#715b50;max-width:440px;text-wrap:pretty}
+.site-shell .collection{max-width:1340px;margin-inline:auto;width:88%}
+.site-shell .collection-heading h2{font-size:clamp(38px,4.2vw,51px);line-height:1.08;text-wrap:balance}
+.site-shell .scrapbook-label{font-size:12px;line-height:1.7;color:#7e634b;gap:8px}
+.site-shell .collection-controls{gap:16px 22px;padding-block:21px;border-color:#ddcebb}
+.site-shell .filter-tabs{gap:5px}
+.site-shell .filter-tabs button{min-height:44px;padding-inline:16px;font-size:12px;color:#715b50}
+.site-shell .filter-tabs button.active{color:#fff8ef}
+.site-shell .search-field{min-height:46px;padding-inline:15px;border-color:#d8c5a9;background:#fffcf5;color:#765b42}
+.site-shell .search-field input{font-size:14px;width:min(215px,21vw);color:#53333b}
+.site-shell .search-field input::placeholder{color:#7f6b5c;opacity:1}
+.site-shell .search-sort select{min-height:44px;font-size:13px;color:#715b50;max-width:150px}
+.site-shell .result-count{font-size:12px;line-height:1.7;color:#796458;margin-block:17px}
+.site-shell .wish-grid{grid-template-columns:repeat(3,minmax(0,1fr));gap:22px}
+.site-shell .wish-card{padding:27px;min-height:295px;border-color:#deceba;border-radius:6px;background:linear-gradient(145deg,#fffdf7,#fcf5e8);box-shadow:0 2px 4px #54322404,0 13px 23px -20px #54322435;overflow-wrap:anywhere;transition:transform .28s,box-shadow .28s,border-color .28s}
+.site-shell .wish-author{gap:12px}
+.site-shell .wish-author .avatar{width:42px;height:42px;font-size:18px}
+.site-shell .wish-author strong{font-size:12px;line-height:1.6;color:#533d36}
+.site-shell .wish-message{font-size:25px;line-height:1.45;color:#593c39;margin-block:24px 27px;text-wrap:pretty}
+.site-shell .wish-footer{font-size:11px;line-height:1.5;color:#846342;border-color:#e4d6c2;padding-top:16px}
+.site-shell .wish-footer .read-note{display:inline-flex;align-items:center;gap:8px;color:#77364a}
+.site-shell .load-button{min-height:46px;font-size:12px;padding:13px 24px;background:#fffaf066;border-color:#cdb590;color:#6f4f36}
+.site-shell .empty-state{color:#79604b}
+.site-shell .empty-state p{font-size:14px;line-height:1.8}
+.site-shell .closing-note{padding-block:58px;border-color:#ddcebb}
+.site-shell .closing-note h2{font-size:51px;line-height:1.05}
+.site-shell .closing-note p{font-size:14px;line-height:1.85;color:#715b50;max-width:440px;margin-inline:auto;text-wrap:pretty}
+.wish-dialog{border-color:#d4bb93;border-radius:7px;background:#fffaf0;box-shadow:0 35px 100px #220b1c55}
+.wish-dialog::backdrop{background:#2e1925a8;backdrop-filter:blur(7px)}
+.wish-dialog .dialog-paper{padding:62px 40px 35px;background:repeating-linear-gradient(0deg,#93764403 0 1px,transparent 1px 4px),radial-gradient(ellipse at top right,#efdfc550,transparent 70%)}
+.wish-dialog .dialog-close{width:44px;height:44px;min-width:44px;min-height:44px;margin:-48px -24px 3px auto;top:8px;right:auto;border:1px solid #d7c5ab88;color:#6c3343;background:#fffaf0f5;box-shadow:0 2px 6px #42232a0a;transition:background .2s,border-color .2s}
+.wish-dialog .dialog-close:hover{background:#f3e6d2;border-color:#c0a27b}
+.wish-dialog .dialog-close svg{width:19px;height:19px}
+.wish-dialog .eyebrow{font-size:9px;color:#79603f;letter-spacing:1.7px}
+.wish-dialog .dialog-message{font-size:28px;line-height:1.55;color:#583d38;text-wrap:pretty}
+.wish-dialog .dialog-signature>span{color:#866542}
+.wish-dialog .dialog-signature strong{font-size:13px;color:#5c3f37}
+.wish-dialog .dialog-bottom{font-size:10px;line-height:1.7;color:#79603f;flex-wrap:wrap}
+.wish-dialog .note-signature{color:#865e3f}
+.wish-dialog .letter-body{font-size:25px;line-height:1.6;color:#543e37;margin-top:25px}
+.wish-dialog .dialog-paper h2{font-size:35px;line-height:1.08;text-wrap:balance}
+.wish-dialog.letter-dialog{width:min(700px,calc(100vw - 30px))}
+.wish-dialog.letter-dialog .dialog-paper{padding-inline:48px;padding-bottom:42px}
+.wish-dialog[open] .dialog-paper{animation:section-paper-in .24s ease-out both}
+@keyframes section-paper-in{from{opacity:0;translate:0 5px}to{opacity:1;translate:0 0}}
+@keyframes section-candle-smoke{0%{opacity:.6;transform:translateY(0) scale(1)}100%{opacity:0;transform:translate(4px,-20px) scale(2.1,2.8)}}
+@media(hover:hover) and (pointer:fine){
+  .letter-grid .letter-envelope:hover{transform:translateY(-5px) rotate(-.4deg);border-color:#bba17c;box-shadow:0 5px 8px #54331c05,0 19px 32px -16px #54331c33}
+  .notes-grid button:hover{transform:translateY(-4px) rotate(0);border-color:#bba17c;box-shadow:0 14px 22px -12px #68412133}
+  .site-shell .wish-card:hover{transform:translateY(-4px);border-color:#bea37e;box-shadow:0 6px 9px #54322405,0 20px 30px -17px #54322430}
+  .portrait-copy summary:hover{color:#8e2948}
+}
+@media(max-width:1050px){
+  .notes-page .notes-grid{grid-template-columns:repeat(4,minmax(0,1fr))}
+  .site-shell .collection-controls{flex-wrap:wrap}
+  .site-shell .search-sort{margin-left:auto}
+  .site-shell .wish-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:20px}
+  .site-shell .collection-heading{align-items:start}
+  .site-shell .scrapbook-label{padding-top:7px}
+}
+@media(min-width:651px) and (max-width:850px){
+  .portrait-page{gap:30px;padding-inline:25px}
+  .portrait-copy h1{font-size:59px}
+  .portrait-copy summary{font-size:24px}
+  .portrait-copy details p{padding-left:0;font-size:13px}
+  .notes-page .notes-grid{grid-template-columns:repeat(3,minmax(0,1fr))}
+}
+@media(max-width:650px){
+  .letters-page .letter-grid{grid-template-columns:minmax(0,1fr);gap:18px;padding-inline:6%}
+  .letter-grid .letter-envelope{min-height:275px;padding:30px 24px 26px}
+  .letter-grid h2{font-size:34px;max-width:280px}
+  .letter-grid .letter-open{margin-top:19px}
+  .letters-page .experience-title p,.notes-page .experience-title p,.cake-page .experience-title p{font-size:14px;line-height:1.8}
+  .portrait-page{grid-template-columns:minmax(0,1fr);margin:25px auto 45px;gap:32px;padding-inline:7%}
+  .portrait-page .large-portrait{max-width:340px;margin:8px auto 0}
+  .portrait-copy h1{font-size:62px;margin-block:10px 22px}
+  .portrait-copy details{padding-block:12px}
+  .portrait-copy summary{font-size:26px}
+  .portrait-copy details p{padding-left:25px;max-width:none;font-size:14px;line-height:1.85}
+  .cake-page .birthday-cake.photo-cake{max-width:345px;margin-top:34px;padding:10px}
+  .cake-page .photo-cake figcaption{font-size:22px}
+  .cake-page .birthday-celebration>p{font-size:29px}
+  .cake-page .wish-journal{margin-top:34px;padding:24px 21px}
+  .wish-journal>label{font-size:29px}
+  .wish-journal textarea{font-size:23px;padding:14px}
+  .notes-page .notes-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:17px;padding-inline:7%}
+  .notes-grid button{min-height:145px;padding:20px 17px}
+  .notes-grid button>span:first-child{font-size:41px}
+  .notes-grid button>span:last-child{margin-top:23px;font-size:11px;gap:4px}
+  .site-shell .hero-subtitle{font-size:14px;margin-inline:auto}
+  .site-shell .collection{margin-top:46px;width:88%}
+  .site-shell .collection-heading{display:block}
+  .site-shell .collection-heading h2{font-size:41px}
+  .site-shell .scrapbook-label{padding-top:0;margin-top:13px}
+  .site-shell .collection-controls{gap:16px;padding-block:16px}
+  .site-shell .filter-tabs{justify-content:flex-start;gap:5px}
+  .site-shell .filter-tabs button{font-size:12px;padding-inline:13px}
+  .site-shell .search-sort{width:100%;margin:0;gap:10px;flex-wrap:wrap}
+  .site-shell .search-field{flex:1 1 175px;width:100%}
+  .site-shell .search-field input{width:100%;font-size:16px}
+  .site-shell .search-sort select{font-size:14px;width:auto;max-width:none;padding-inline:7px}
+  .site-shell .wish-grid{grid-template-columns:minmax(0,1fr);gap:17px}
+  .site-shell .wish-card{padding:25px;min-height:270px}
+  .site-shell .wish-message{font-size:26px;line-height:1.45;margin-block:22px 25px}
+  .site-shell .wish-footer{font-size:11px}
+  .site-shell .closing-note{padding-block:42px}
+  .site-shell .closing-note h2{font-size:45px}
+  .site-shell .closing-note p{font-size:14px;line-height:1.8}
+  .wish-dialog .dialog-paper,.wish-dialog.letter-dialog .dialog-paper{padding:60px 23px 30px}
+  .wish-dialog .dialog-close{margin-right:-10px}
+  .wish-dialog .dialog-message{font-size:27px;line-height:1.5}
+  .wish-dialog .dialog-paper h2{font-size:31px}
+  .wish-dialog .letter-body{font-size:23px;line-height:1.6}
+}
+@media(max-width:360px){
+  .letter-grid .letter-envelope{padding-inline:21px}
+  .letter-grid h2{font-size:32px}
+  .portrait-copy h1{font-size:56px}
+  .portrait-copy summary{font-size:23px;gap:10px}
+  .portrait-copy details p{padding-left:0}
+  .notes-page .notes-grid{gap:15px;padding-inline:6%}
+  .notes-grid button{padding:18px 13px}
+  .notes-grid button>span:last-child{font-size:10px}
+  .cake-page .wish-journal{padding:23px 18px}
+  .site-shell .filter-tabs button{padding-inline:10px;font-size:11px}
+  .site-shell .wish-card{padding:22px}
+  .site-shell .wish-message{font-size:25px}
+  .site-shell .collection-heading h2{font-size:38px}
+}
+@media(pointer:coarse){
+  .letter-grid .letter-envelope:hover,.site-shell .wish-card:hover{transform:none}
+  .notes-grid button:hover{transform:rotate(-2deg)}
+  .notes-grid button:nth-child(even):hover{transform:rotate(2deg)}
+}
+@media(prefers-reduced-motion:reduce){
+  .letter-grid .letter-envelope,.notes-grid button,.site-shell .wish-card,.portrait-copy summary>span:last-child,.cake-page .photo-candle i,.wish-journal textarea,.wish-dialog .dialog-close{transition:none}
+  .portrait-copy details[open] p,.wish-dialog[open] .dialog-paper,.cake-page .photo-cake.candles-out .photo-candle::before{animation:none}
+  .cake-page .photo-cake.candles-out .photo-candle::before{opacity:0}
+}

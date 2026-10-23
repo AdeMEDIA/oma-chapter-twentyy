@@ -1,47 +1,42 @@
-# Oma — Chapter Twenty
+﻿# Oma — Chapter Twenty
 
-Ade’s twentieth-birthday website for Oma, built with React and Vite. The birthday room is the homepage. Photos, Orente and the birthday film are served from `public/`.
+Ade's twentieth-birthday website for Oma, built with React and Vite. The labelled birthday room is the homepage. Photographs, Orente and the complete birthday film are served from public/.
 
-- Live website: https://oma-chapter-twenty.vercel.app
-- GitHub: https://github.com/AdeMEDIA/oma-chapter-twentyy
-- Custom domain: `sylverat20.com.ng`, attached in Vercel; registrar DNS setup is pending as of 22 October 2026.
-- Vercel project: `adepoju-abdullahis-projects/oma-chapter-twenty` on the Hobby plan, connected to the repository’s `main` branch.
+- Website: https://sylverat20.com.ng
+- Vercel URL: https://oma-chapter-twenty.vercel.app
+- Source: https://github.com/AdeMEDIA/oma-chapter-twentyy
+- Production project: adepoju-abdullahis-projects/oma-chapter-twenty, connected to main.
 
 ## Run locally
 
-```powershell
-npm.cmd ci
-npm.cmd run dev
-```
+    npm.cmd ci
+    npm.cmd run dev
 
-## Check the production build
+For the local review address used during development:
 
-```powershell
-npm.cmd run lint
-npm.cmd run build
-npm.cmd run preview
-```
+    npm.cmd run dev -- --host 127.0.0.1 --port 5180 --strictPort
 
-## Deploy to Vercel
+## Verify and deploy
 
-1. Push this project to a private GitHub repository.
-2. In Vercel, select **Add New → Project** and import that repository.
-3. Use the **Vite** preset, project root `./`, build command `npm run build`, and output directory `dist`. No environment variables are required.
-4. Deploy, then check the Vercel URL, room links, photos, sound and film.
-5. Under **Settings → Domains**, add `sylverat20.com.ng` and optionally `www.sylverat20.com.ng`.
-6. At WhoGoHost, use the domain’s Nameservers page to set `ns1.vercel-dns.com` and `ns2.vercel-dns.com`, as confirmed for this domain by Vercel. Alternatively, keep the registrar’s nameservers and enter the exact DNS records displayed by Vercel. Use one method, then wait for Vercel to confirm the domain and HTTPS certificate.
+    npm.cmd run lint
+    npm.cmd run build
+    npm.cmd run preview
 
-GitHub holds the source and Vercel hosts the website. Future pushes to the connected production branch trigger deployment. GitHub is optional if deploying with the Vercel CLI instead.
+Review changes before pushing to main. The connected Vercel project builds production releases from that branch. Confirm the deployment is Ready and check the custom domain, room labels, scrapbook, wishes, soundtrack and film afterward. The custom domain is already connected; no registrar changes are needed for normal releases.
 
-The app uses hash routes such as `/#/scrapbook`; no catch-all rewrite is needed. The repository should include `src/`, `public/`, `index.html`, the package files and build configuration. `node_modules/`, `dist/`, local environment files and `review-artifacts/` are excluded from Git.
+The app uses hash routes such as /#/scrapbook; no catch-all rewrite is needed. Source, original public assets and responsive image alternatives belong in Git. Dependencies, build output, local environment files, .vercel/ and review-artifacts/ remain excluded. No application environment variables are required.
 
-## Content
+## Content and behavior
 
-- `src/data/birthday.js`: media, scrapbook titles/photos, letters and little notes.
-- `src/data/wishes.js`: the ten collected wishes and optional birthday-post URL.
-- `src/components/`: room and page interactions, scrapbook, film and soundtrack.
-- `public/`: all website images, audio, video and local fonts.
+- src/data/birthday.js: media, five active scrapbook spreads, archived chapter, letters and little notes.
+- src/data/wishes.js: the ten collected wishes and optional birthday-post URL.
+- src/components/Scrapbook.jsx and scrapbook.css: paired desktop chapters and sequential mobile leaves.
+- src/components/BirthdayRoom.jsx and src/room-fit.css: the original labelled room with responsive positions.
+- src/components/Soundtrack.jsx: one persistent Orente player; dismissing the panel does not stop the song.
 
-Wish-journal entries, note progress and music preferences stay in the visitor’s browser. They are not stored on a server. The deferred gift and X-post buttons remain hidden while their data is empty.
+The welcome screen starts music only after an explicit choice and remembers the introduction for the browsing session. Audio position survives internal navigation. The film keeps its original audio, independently controlled as requested.
 
-The supplied film contains an embedded “Chapter Nineteen” opening card; replacing it requires a corrected video export. See `FILM.md` for details. `RELEASE-CHECKLIST.md` records completed reviews and remaining items.
+Wish-journal entries and note progress stay in the visitor's browser. The deferred gift and X-post controls stay hidden while their data is empty. The three scrapbook photo slots are intentionally reserved for later uploads.
+
+All original media is retained. The supplied film's embedded Chapter Nineteen opening card requires a revised video export to change; CSS does not remove embedded bars or crop faces. See FILM.md, SOUNDTRACK.md and SCRAPBOOK-REVIEW.md.
+

@@ -35,6 +35,7 @@ export const portraitNotes = [
 
 export const spreads = [
   {
+    id: 'childhood',
     title: 'Before the new chapter',
     image: '/images/scrapbook/oma-childhood.png',
     imageAlt: 'Oma as a child in a pink and white dress',
@@ -44,32 +45,52 @@ export const spreads = [
     image2Aspect: '175 / 233',
   },
   {
+    id: 'beginning',
     title: 'The beginning of us',
-    image: '/images/scrapbook/us-mirror.webp',
-    imageAlt: 'Oma and Ade hugging in a black and white mirror photo',
+    image: null,
+    imageAlt: 'Photo to be added',
+    imagePlaceholder: 'Photo to be added',
     imageAspect: '3 / 4',
     image2: '/images/scrapbook/us-purple-mirror.webp',
     image2Alt: 'Oma and Ade together in a mirror photo under purple light',
     image2Aspect: '203 / 320',
   },
   {
+    id: 'oma',
     title: 'Oma being Oma',
     image: '/images/scrapbook/oma-pink-hat.webp',
     imageAlt: 'Oma wearing a pink hat and pink top',
+    imageAspect: '3 / 4',
+    image2: '/images/scrapbook/us-mirror.webp',
+    image2Alt: 'Oma and Ade hugging in a black and white mirror photo',
+    image2Aspect: '3 / 4',
+  },
+  {
+    id: 'through-my-eyes',
+    title: 'Through my eyes',
+    image: null,
+    imageAlt: 'Photo to be added',
+    imagePlaceholder: 'Photo to be added',
+    imageAspect: '3 / 4',
+    image2: null,
+    image2Alt: 'Photo to be added',
+    image2Placeholder: 'Photo to be added',
+    image2Aspect: '3 / 4',
+  },
+  {
+    id: 'future',
+    title: 'Pages yet to be written',
+    image: '/images/scrapbook/oma-black-vest.webp',
+    imageAlt: 'Oma wearing a black vest over a white shirt',
     imageAspect: '3 / 4',
     image2: '/images/scrapbook/oma-red-glasses.webp',
     image2Alt: 'Oma wearing red glasses and a black top',
     image2Aspect: '3 / 4',
   },
-  {
-    title: 'Through my eyes',
-    image: '/images/portrait/oma-through-ades-eyes.jpg',
-    imageAlt: 'Black and white portrait of Oma with fabric over her head',
-    imageAspect: '3 / 4',
-    image2: '/images/scrapbook/us-mirror.webp',
-    image2Alt: 'Oma and Ade hugging in a mirror photo',
-    image2Aspect: '3 / 4',
-  },
+];
+
+// Retained for future use; archived spreads do not appear in scrapbook navigation.
+export const archivedSpreads = [
   {
     title: 'The woman you are becoming',
     image: '/images/scrapbook/oma-school-days.png',
@@ -78,15 +99,6 @@ export const spreads = [
     image2: '/images/scrapbook/oma-red-glasses.webp',
     image2Alt: 'Oma wearing red glasses and a black top',
     image2Aspect: '3 / 4',
-  },
-  {
-    title: 'Pages yet to be written',
-    image: '/images/scrapbook/oma-black-vest.webp',
-    imageAlt: 'Oma wearing a black vest over a white shirt',
-    imageAspect: '3 / 4',
-    image2: '/images/scrapbook/us-purple-mirror.webp',
-    image2Alt: 'Oma and Ade together in a mirror photo under purple light',
-    image2Aspect: '203 / 320',
   },
 ];
 

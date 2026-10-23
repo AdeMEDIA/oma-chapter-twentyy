@@ -1,5 +1,6 @@
 import { useEffect, useRef, useState } from 'react';
 import { birthday } from '../data/birthday';
+import Icon from './Icon';
 import './film-player.css';
 
 export default function FilmPlayer() {
@@ -13,7 +14,7 @@ export default function FilmPlayer() {
 
   return <div className="cinema-frame film-player" style={{ '--film-aspect': `${birthday.filmWidth} / ${birthday.filmHeight}`, '--film-poster': `url("${birthday.filmPoster}")` }}>
     <div className="film-screen">
-      {failed ? <div className="film-placeholder film-error" role="alert"><h2>The film couldn’t load.</h2><p>Please try again.</p><button className="film-retry" onClick={() => setFailed(false)}>Try again</button></div> : <video
+      {failed ? <div className="film-placeholder film-error" role="alert"><Icon name="film" size={24} /><h2>The film couldn’t load.</h2><p>Please try again.</p><button className="film-retry" onClick={() => setFailed(false)}>Try again<Icon name="arrowRight" size={16} /></button></div> : <video
         ref={video}
         src={birthday.film}
         poster={birthday.filmPoster}

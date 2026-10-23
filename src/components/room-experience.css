@@ -1,0 +1,255 @@
+.birthday-room {
+  --room-cream: #fff2dc;
+  --room-gold: #e4bf84;
+  --room-wine: #35171f;
+  --room-ink: #5e2839;
+  --room-paper: #f7efe2;
+  color: var(--room-cream);
+  background: var(--room-wine);
+  isolation: isolate;
+}
+
+.birthday-room *,
+.birthday-room *::before,
+.birthday-room *::after { box-sizing: border-box; }
+.birthday-room a { color: inherit; text-decoration: none; }
+.birthday-room svg { flex-shrink: 0; }
+.birthday-room button { font: inherit; }
+.birthday-room a:focus-visible,
+.birthday-room button:focus-visible { outline: 2px solid #f3d19a; outline-offset: 5px; }
+
+.birthday-room__hero { position: relative; }
+.birthday-room__scene {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 1672 / 941;
+  overflow: hidden;
+  background: #39251e;
+  isolation: isolate;
+  opacity: 0;
+  transition: opacity 1.4s ease;
+}
+.birthday-room.intro-complete .birthday-room__scene { opacity: 1; }
+.birthday-room__art { position: absolute; inset: 0; }
+.birthday-room__artwork { display: block; width: 100%; height: 100%; object-fit: contain; user-select: none; pointer-events: none; }
+.birthday-room__portrait {
+  position: absolute;
+  left: 22.847%;
+  top: 7.651%;
+  width: 6.758%;
+  height: 22.848%;
+  clip-path: polygon(0 0, 100% 6.05%, 100% 96.28%, 0 100%);
+  overflow: hidden;
+  pointer-events: none;
+  background: #614a39;
+}
+.birthday-room__portrait img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: 60% 75%;
+  transform: scale(1.38);
+  transform-origin: 60% 75%;
+  filter: brightness(.86) sepia(.12);
+}
+.birthday-room__portrait::after { content: ''; position: absolute; inset: 0; box-shadow: inset 2px 1px 5px #24170c65; background: linear-gradient(115deg, #d8b78a12, transparent 55%, #2b190b12); }
+.birthday-room__light { position: absolute; inset: 0; background: radial-gradient(ellipse at 16% 22%, #ffbd6421, transparent 36%); pointer-events: none; }
+.birthday-room__vignette { position: absolute; inset: 0; background: linear-gradient(180deg, #1e101b48, transparent 35%, transparent 63%, #211018c4), linear-gradient(90deg, #21131a15, transparent 30%, transparent 80%, #21131a26); pointer-events: none; }
+
+.birthday-room__opening {
+  position: absolute;
+  top: 13.5%;
+  left: 55%;
+  z-index: 3;
+  width: 57%;
+  transform: translateX(-50%);
+  text-align: center;
+  pointer-events: none;
+  text-shadow: 0 3px 25px #2913182b;
+}
+.birthday-room__eyebrow { display: block; padding-left: .6em; font-size: 12px; line-height: 1.5; font-weight: 500; letter-spacing: .6em; text-transform: uppercase; color: #f0d8b5; }
+.birthday-room__opening h1 { margin: 11px 0 9px; font-family: var(--serif); font-size: clamp(58px, 6.5vw, 112px); font-weight: 400; line-height: .98; letter-spacing: -.035em; color: #fff0d8; }
+.birthday-room__opening h1 em { font-weight: 400; }
+.birthday-room__opening p { display: flex; align-items: center; justify-content: center; gap: 13px; margin: 0; font-family: var(--serif); font-size: clamp(19px, 1.8vw, 30px); font-style: italic; color: #f4dfbf; }
+.birthday-room__opening p::before,
+.birthday-room__opening p::after { content: ''; width: 30px; height: 1px; background: #e2bb7e77; }
+.birthday-room__opening > * { opacity: 0; transform: translateY(14px); transition: opacity 1s ease, transform 1.2s cubic-bezier(.2, .7, .2, 1); }
+.birthday-room.intro-complete .birthday-room__opening > * { opacity: 1; transform: translateY(0); }
+.birthday-room.intro-complete .birthday-room__eyebrow { transition-delay: .15s; }
+.birthday-room.intro-complete .birthday-room__opening h1 { transition-delay: .3s; }
+.birthday-room.intro-complete .birthday-room__opening p { transition-delay: .5s; }
+
+.birthday-room__hotspots { position: absolute; inset: 0; z-index: 4; }
+.birthday-room__hotspot {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  width: max-content;
+  min-height: 46px;
+  padding: 9px 12px 9px 9px;
+  border: 1px solid #edc68e6b;
+  border-radius: 50px;
+  background: #28171bd9;
+  color: #ffefd7;
+  font-size: 13px;
+  line-height: 1.35;
+  cursor: pointer;
+  transform: translate(-50%, -50%);
+  box-shadow: 0 4px 18px #180b1726, inset 0 1px 0 #ffe4b90b;
+  transition: background .25s, border-color .25s, box-shadow .25s;
+}
+.birthday-room__hotspot > svg { color: #d7b987; opacity: .75; }
+.birthday-room__beacon { display: grid; place-items: center; width: 27px; height: 27px; flex-shrink: 0; border: 1px solid #edc68e55; border-radius: 50%; color: #f9d596; background: #e6b36a0c; box-shadow: 0 0 13px #e9ad4721; transition: box-shadow .25s, background .25s; }
+.birthday-room__hotspot:focus-visible { outline-offset: 4px; }
+.birthday-room__hotspot--portrait { left: 25.4%; top: 35.5%; }
+.birthday-room__hotspot--record { left: 10.5%; top: 42%; }
+.birthday-room__hotspot--letters { left: 30.5%; top: 78%; }
+.birthday-room__hotspot--scrapbook { left: 49%; top: 75.5%; }
+.birthday-room__hotspot--cake { left: 64.8%; top: 51.5%; }
+.birthday-room__hotspot--gift { left: 79.2%; top: 77%; }
+.birthday-room__hotspot--film { left: 46%; top: 42%; }
+.birthday-room__hotspot--wishes { top: 27%; right: 3.8%; transform: none; border-radius: 4px; padding: 12px 15px 12px 11px; gap: 11px; }
+.birthday-room__wishes small { display: block; margin-top: 4px; font-size: 10px; color: #d8b991; }
+.birthday-room__wishes .birthday-room__beacon { width: 32px; height: 32px; }
+.birthday-room__hotspot.is-playing .birthday-room__beacon { background: #f2ce8f23; box-shadow: 0 0 17px #e9ad4738; }
+.birthday-room__scene-notes { position: absolute; right: 4.2%; bottom: 5.6%; display: flex; align-items: center; gap: 10px; min-height: 44px; border-bottom: 1px solid #dfbd8877; font-size: 12px; color: #f5dfbe; transition: color .2s, border-color .2s; }
+.birthday-room__scene-notes > svg:first-child { color: var(--room-gold); }
+.birthday-room__welcome { position: absolute; z-index: 2; left: 4.2%; bottom: 5.5%; margin: 0; font-family: var(--serif); font-style: italic; font-size: clamp(21px, 1.85vw, 32px); line-height: 1.2; color: #f7e4c8; }
+.birthday-room__welcome span { display: block; margin-top: 8px; font-family: 'DM Sans', Arial, sans-serif; font-size: 10px; font-style: normal; line-height: 1.5; letter-spacing: .08em; color: #d4bda4; }
+.birthday-room__scroll { position: absolute; z-index: 5; bottom: 3.8%; left: 50%; display: flex; align-items: center; flex-direction: column; justify-content: center; gap: 8px; min-height: 48px; padding: 4px 10px; color: #e0c6a5; transform: translateX(-50%); font-size: 10px; letter-spacing: .04em; }
+.birthday-room__scroll svg { transition: transform .2s; }
+.birthday-room__mobile-interlude { display: none; }
+
+.birthday-room__collection {
+  display: grid;
+  grid-template-columns: minmax(0, .78fr) minmax(0, 1.65fr);
+  gap: clamp(35px, 5.5vw, 100px);
+  padding: clamp(65px, 7vw, 120px) max(6%, env(safe-area-inset-right)) clamp(55px, 6vw, 100px) max(6%, env(safe-area-inset-left));
+  color: var(--room-ink);
+  background: radial-gradient(ellipse at 0 0, #ead4b348, transparent 42%), var(--room-paper);
+  scroll-margin-top: 35px;
+}
+.birthday-room__collection-eyebrow { display: block; font-size: 10px; font-weight: 500; letter-spacing: .19em; line-height: 1.7; text-transform: uppercase; color: #9b754b; }
+.birthday-room__collection-intro h2 { margin: 17px 0 0; font-family: var(--serif); font-size: clamp(44px, 4.6vw, 76px); font-weight: 400; line-height: .98; letter-spacing: -.035em; color: var(--room-ink); }
+.birthday-room__collection-intro h2 em { font-weight: 400; color: #9a654b; }
+.birthday-room__notes-count { display: flex; align-items: center; gap: 13px; width: max-content; max-width: 100%; margin-top: 37px; padding-top: 19px; border-top: 1px solid #c5a57670; color: #9e784d; }
+.birthday-room__notes-count > svg:last-child { margin-left: 16px; }
+.birthday-room__notes-count strong { display: block; font-family: var(--serif); font-size: 34px; font-weight: 400; line-height: 1; color: var(--room-ink); }
+.birthday-room__notes-count strong span { font-size: 20px; color: #ac8a62; }
+.birthday-room__notes-count small { display: block; margin-top: 5px; font-size: 10px; line-height: 1.5; color: #9a7855; }
+.birthday-room__collection a:focus-visible { outline-color: #8b4a50; }
+.birthday-room__collection-links { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); column-gap: clamp(24px, 3vw, 50px); align-content: start; }
+.birthday-room__destination { position: relative; display: grid; grid-template-columns: 28px minmax(0, 1fr) 20px; align-items: center; gap: 14px; min-width: 0; min-height: 121px; padding: 23px 0; border-top: 1px solid #c6a7776b; transition: border-color .25s; }
+.birthday-room__destination-mark { align-self: start; display: flex; align-items: center; flex-direction: column; gap: 8px; padding-top: 4px; color: #9f784b; transition: color .25s, transform .25s; }
+.birthday-room__destination-mark small { font-size: 9px; font-weight: 500; letter-spacing: .07em; color: #a18b74; }
+.birthday-room__destination h3 { margin: 0; font-family: var(--serif); font-size: clamp(24px, 2.05vw, 33px); font-weight: 500; line-height: 1.1; letter-spacing: -.015em; color: var(--room-ink); overflow-wrap: anywhere; }
+.birthday-room__destination p { margin: 8px 0 0; font-size: 12px; line-height: 1.7; color: #8c735f; }
+.birthday-room__destination-arrow { display: grid; place-items: center; color: #a28059; transition: transform .25s, color .25s; }
+
+@media (hover: hover) and (pointer: fine) {
+  .birthday-room__hotspot:hover { background: #4e2933ed; border-color: #f3cb8e; box-shadow: 0 5px 22px #140b193a, 0 0 0 5px #f0c37d0d; }
+  .birthday-room__hotspot:hover .birthday-room__beacon { background: #f2ce8f19; box-shadow: 0 0 20px #e9ad474d; }
+  .birthday-room__scene-notes:hover { color: #ffe8c4; border-color: #f4ce95; }
+  .birthday-room__scroll:hover svg { transform: translateY(3px); }
+  .birthday-room__destination:hover { border-color: #956243b3; }
+  .birthday-room__destination:hover .birthday-room__destination-mark { color: #743349; transform: translateY(-2px); }
+  .birthday-room__destination:hover .birthday-room__destination-arrow { color: #743349; transform: translateX(4px); }
+}
+
+@media (min-width: 1001px) and (hover: hover) and (pointer: fine) and (prefers-reduced-motion: no-preference) {
+  .birthday-room__scene.is-parallax .birthday-room__art { transform: translate3d(var(--room-shift-x, 0px), var(--room-shift-y, 0px), 0) scale(1.012); transition: transform .65s cubic-bezier(.2, .7, .2, 1); }
+}
+
+@media (min-width: 1700px) {
+  .birthday-room__hotspot { min-height: 50px; font-size: 15px; gap: 11px; padding: 10px 16px 10px 11px; }
+  .birthday-room__beacon { width: 30px; height: 30px; }
+  .birthday-room__scene-notes { font-size: 14px; }
+}
+
+@media (min-width: 1001px) and (max-width: 1199px) {
+  .birthday-room__hotspot { min-height: 44px; gap: 7px; padding: 7px 10px 7px 7px; font-size: 12px; }
+  .birthday-room__beacon { width: 25px; height: 25px; }
+  .birthday-room__hotspot--wishes { top: 28%; right: 3%; padding: 10px; }
+  .birthday-room__opening { top: 14.5%; }
+  .birthday-room__scene-notes { font-size: 11px; gap: 8px; }
+  .birthday-room__scroll { bottom: 3.6%; font-size: 9px; }
+}
+
+@media (max-width: 1000px) {
+  .birthday-room__opening { position: relative; inset: auto; width: 100%; padding: 39px 24px 35px; transform: none; background: radial-gradient(ellipse at 50% 110%, #85513c25, transparent 65%); }
+  .birthday-room__eyebrow { font-size: 10px; }
+  .birthday-room__opening h1 { margin: 12px 0 12px; font-size: clamp(57px, 10vw, 92px); }
+  .birthday-room__opening p { font-size: clamp(21px, 3.1vw, 27px); gap: 12px; }
+  .birthday-room__opening p::before,
+  .birthday-room__opening p::after { width: 23px; }
+  .birthday-room__scene { overflow: hidden; }
+  .birthday-room__vignette { background: linear-gradient(180deg, #35171f00 65%, #35171f4d 100%); }
+  .birthday-room__hotspots,
+  .birthday-room__welcome,
+  .birthday-room__scroll { display: none; }
+  .birthday-room__mobile-interlude { display: flex; align-items: center; justify-content: space-between; gap: 25px; padding: 25px max(6%, env(safe-area-inset-right)) 30px max(6%, env(safe-area-inset-left)); background: linear-gradient(180deg, #412326, var(--room-wine)); }
+  .birthday-room__dedication { display: flex; align-items: center; gap: 17px; min-width: 0; }
+  .birthday-room__portrait-keepsake { display: block; width: 64px; flex-shrink: 0; padding: 3px; border: 1px solid #d7af7680; background: #d4b08212; }
+  .birthday-room__portrait-keepsake img { display: block; width: 100%; height: 78px; object-fit: cover; object-position: 60% 75%; }
+  .birthday-room__dedication > p { margin: 0; font-family: var(--serif); font-size: 28px; font-style: italic; line-height: 1.15; color: #f5ddbd; }
+  .birthday-room__dedication > p span { display: block; margin-top: 8px; font-family: 'DM Sans', Arial, sans-serif; font-size: 10px; font-style: normal; letter-spacing: .035em; line-height: 1.5; color: #cbae97; }
+  .birthday-room__record { display: flex; align-items: center; gap: 12px; min-height: 58px; padding: 8px 12px 8px 9px; border: 1px solid #cba16d5e; border-radius: 3px; background: #e3b67706; color: #f8e4c9; text-align: left; cursor: pointer; }
+  .birthday-room__record-icon { display: grid; place-items: center; width: 37px; height: 37px; border: 1px solid #cba16d59; border-radius: 50%; color: #dfbd87; background: #e3b67709; }
+  .birthday-room__record strong { display: block; font-family: var(--serif); font-size: 23px; font-weight: 400; line-height: 1.1; }
+  .birthday-room__record small { display: block; margin-top: 3px; font-size: 10px; line-height: 1.4; color: #c4a68c; }
+  .birthday-room__record-play { display: grid; place-items: center; width: 28px; height: 28px; margin-left: 17px; color: #e4c18e; }
+  .birthday-room__record.is-playing .birthday-room__record-icon { background: #e3b67722; border-color: #e4c18e99; }
+  .birthday-room__collection { grid-template-columns: minmax(0, 1fr); gap: 35px; padding-top: 47px; padding-bottom: 55px; }
+  .birthday-room__collection-intro { display: flex; align-items: flex-end; justify-content: space-between; gap: 28px; }
+  .birthday-room__collection-intro h2 { margin-top: 12px; font-size: clamp(46px, 7vw, 64px); }
+  .birthday-room__notes-count { margin: 0 0 3px; min-width: 168px; }
+  .birthday-room__collection-links { column-gap: 35px; }
+  .birthday-room__destination { min-height: 113px; }
+  .birthday-room__destination h3 { font-size: 29px; }
+  .birthday-room__destination p { font-size: 12px; }
+}
+
+@media (max-width: 600px) {
+  .birthday-room__opening { padding-top: 33px; padding-bottom: 31px; }
+  .birthday-room__opening h1 { font-size: clamp(51px, 13.5vw, 77px); margin: 11px 0 10px; white-space: nowrap; }
+  .birthday-room__opening p { font-size: 23px; }
+  .birthday-room__mobile-interlude { flex-direction: column; align-items: stretch; gap: 22px; padding-top: 23px; padding-bottom: 27px; }
+  .birthday-room__dedication { max-width: 365px; margin-inline: auto; width: 100%; }
+  .birthday-room__dedication > p { font-size: 27px; }
+  .birthday-room__dedication > p span { margin-top: 7px; }
+  .birthday-room__record { width: 100%; padding: 10px 15px 10px 11px; }
+  .birthday-room__record strong { font-size: 24px; }
+  .birthday-room__record small { font-size: 11px; }
+  .birthday-room__record-play { margin-left: auto; }
+  .birthday-room__collection { gap: 26px; padding-top: 38px; padding-bottom: 40px; scroll-margin-top: 20px; }
+  .birthday-room__collection-intro { display: block; }
+  .birthday-room__collection-eyebrow { font-size: 9px; letter-spacing: .16em; }
+  .birthday-room__collection-intro h2 { font-size: clamp(45px, 11.5vw, 62px); line-height: 1; margin-top: 12px; }
+  .birthday-room__notes-count { gap: 11px; padding-top: 0; border: 0; margin-top: 24px; min-height: 44px; }
+  .birthday-room__notes-count strong { font-size: 30px; }
+  .birthday-room__notes-count strong span { font-size: 19px; }
+  .birthday-room__notes-count > svg:last-child { margin-left: 10px; }
+  .birthday-room__notes-count small { font-size: 10px; }
+  .birthday-room__collection-links { grid-template-columns: minmax(0, 1fr); gap: 0; }
+  .birthday-room__destination { min-height: 108px; grid-template-columns: 28px minmax(0, 1fr) 20px; gap: 15px; padding-block: 22px; }
+  .birthday-room__destination h3 { font-size: 28px; line-height: 1.1; }
+  .birthday-room__destination p { font-size: 13px; line-height: 1.65; margin-top: 6px; }
+  .birthday-room__destination-mark { padding-top: 4px; gap: 7px; }
+}
+
+@media (max-width: 360px) {
+  .birthday-room__opening { padding-inline: 17px; }
+  .birthday-room__opening h1 { font-size: clamp(44px, 13.5vw, 51px); }
+  .birthday-room__opening p { font-size: 21px; }
+  .birthday-room__dedication > p { font-size: 25px; }
+  .birthday-room__collection-intro h2 { font-size: 43px; }
+  .birthday-room__destination { gap: 12px; }
+  .birthday-room__destination h3 { font-size: 26px; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .birthday-room *, .birthday-room *::before, .birthday-room *::after { animation: none !important; transition: none !important; scroll-behavior: auto !important; }
+  .birthday-room__art { transform: none !important; }
+}

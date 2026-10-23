@@ -1,0 +1,69 @@
+/* Keep the original labelled room. Only the small-screen geometry changes. */
+.birthday-room--restored .room-viewport{width:100%;overflow:hidden;overscroll-behavior-x:auto}
+.birthday-room--restored .room-stage.photographic-room{width:100%;max-width:100%;height:auto;aspect-ratio:auto;margin:0;border:0;border-radius:0;background:#351b22}
+.birthday-room--restored .room-scene-canvas{position:relative;width:100%;aspect-ratio:1672/941;isolation:isolate}
+.birthday-room--restored .room-background{position:absolute;inset:0;display:block;width:100%;height:100%;object-fit:contain}
+.birthday-room--restored .room-scene-labels{position:absolute;inset:0;z-index:3}
+.birthday-room--restored .room-hotspot{display:flex;align-items:center;justify-content:center;width:max-content;min-height:44px;gap:9px;border:1px solid #cbaa6d65;border-radius:30px;background:#241815b8;padding:9px 14px 9px 11px;color:#fff4de;font-family:var(--serif);font-size:16px;white-space:nowrap;text-align:center;transform:translate(-50%,-50%);backdrop-filter:blur(4px)}
+.birthday-room--restored .room-hotspot:hover,.birthday-room--restored .room-hotspot:focus-visible{background:#4e3024eb;border-color:#ebc991;box-shadow:0 0 0 5px #d6aa5914}
+.birthday-room--restored .room-film-link{display:flex;align-items:center;gap:8px;min-height:44px;white-space:nowrap}
+.birthday-room--restored .room-wishes-link{min-height:44px}
+.birthday-room--restored .room-wishes-caption{font-family:var(--serif);font-size:20px;line-height:1.2}
+.birthday-room--restored .room-wishes-caption small{font-size:9px;letter-spacing:.4px}
+.birthday-room--restored .scene-bottom>a{gap:7px;min-height:44px}
+.birthday-room--restored .room-instruction{margin:0;padding:17px 15px;background:#f7efe2;color:#76583f;font-size:11px;line-height:1.7;text-align:center}
+.birthday-room--restored .spot-cake{top:60.6%}
+@media(min-width:1001px){
+  .birthday-room--restored .scene-title{left:54%;top:8.5%}
+  .birthday-room--restored .scene-title>span{font-size:clamp(35px,4vw,65px)}
+  .birthday-room--restored .room-film-link{left:37%;top:28%;right:auto;font-size:14px}
+}
+@media(min-width:600px) and (max-width:1000px){
+  .birthday-room--restored .room-hotspot{font-size:14px;gap:7px;padding:8px 11px}
+  .birthday-room--restored .spot-record{left:10.5%;top:47%}
+  .birthday-room--restored .spot-portrait{left:25.5%;top:33.5%}
+  .birthday-room--restored .spot-letters{left:30%;top:76%}
+  .birthday-room--restored .spot-book{left:50%;top:73%}
+  .birthday-room--restored .spot-cake{left:69%;top:61%}
+  .birthday-room--restored .room-film-link{left:38%;right:auto;top:38%;font-size:14px;padding:6px 9px}
+  .birthday-room--restored .film-play{width:18px;height:18px}
+  .birthday-room--restored .room-wishes-link{right:3%;top:15%;gap:6px;padding:8px 10px}
+  .birthday-room--restored .room-wishes-link .room-wishes-caption{font-size:15px}
+  .birthday-room--restored .room-wishes-icon svg{width:18px;height:18px}
+  .birthday-room--restored .room-wishes-arrow{display:none}
+  .birthday-room--restored .scene-title{left:53%;top:5%;width:40%}
+  .birthday-room--restored .scene-title>span{font-size:clamp(29px,4.5vw,42px);letter-spacing:7px;line-height:1}
+  .birthday-room--restored .scene-title h1{font-size:10px;letter-spacing:2px;padding-top:5px;margin-top:5px;line-height:1.4}
+  .birthday-room--restored .scene-title p{font-size:15px;line-height:1.2;margin-top:4px}
+}
+@media(max-width:1000px){
+  .birthday-room--restored .scene-bottom{position:relative;inset:auto;display:grid;grid-template-columns:minmax(0,1fr) auto;align-items:center;gap:12px;min-height:68px;padding:12px 4%;background:#351b22}
+  .birthday-room--restored .scene-welcome{font-size:16px;line-height:1.25}
+  .birthday-room--restored .scene-welcome small{font-size:10px;margin-top:5px}
+  .birthday-room--restored .scene-bottom>a{font-size:13px;line-height:1.3;padding-block:7px}
+}
+@media(max-width:599px){
+  .birthday-room--restored .room-hotspot{font-size:13px;line-height:1.1;min-height:44px;padding:0 8px;gap:5px;transform:none;backdrop-filter:none}
+  .birthday-room--restored .hotspot-dot{width:6px;height:6px}
+  .birthday-room--restored .spot-portrait{left:calc(25.5% - 77.6px);top:31.11%;width:129px}
+  .birthday-room--restored .spot-record{left:4px;top:56.67%;width:74px}
+  .birthday-room--restored .spot-letters{left:4px;top:82.22%;width:104px}
+  .birthday-room--restored .spot-book{left:34.375%;top:77.78%;width:103px}
+  .birthday-room--restored .spot-cake{left:auto;right:6px;top:63.89%;width:92px}
+  .birthday-room--restored .spot-gift{left:auto;right:6px;top:86%;width:100px}
+  .birthday-room--restored .room-film-link{left:auto;right:6px;top:38.89%;width:126px;min-height:44px;justify-content:center;gap:4px;padding:4px;font-family:var(--serif);font-size:13px;line-height:1.15;backdrop-filter:none}
+  .birthday-room--restored .film-play{width:14px;height:14px;min-width:14px}
+  .birthday-room--restored .film-play svg{width:9px;height:9px}
+  .birthday-room--restored .room-wishes-link{top:0;right:6px;width:86px;min-height:44px;justify-content:center;padding:6px;border-radius:5px;backdrop-filter:none}
+  .birthday-room--restored .room-wishes-link .room-wishes-caption{font-size:13px;line-height:1.05;text-align:center}
+  .birthday-room--restored .room-wishes-icon,.birthday-room--restored .room-wishes-arrow,.birthday-room--restored .room-wishes-caption small{display:none}
+  .birthday-room--restored .scene-title{left:58%;top:3.9%;width:44%}
+  .birthday-room--restored .scene-title>span{font-size:clamp(24px,5vw,30px);letter-spacing:5px;line-height:1}
+  .birthday-room--restored .scene-title h1{font-size:9px;letter-spacing:1.4px;line-height:1.2;padding:4px 2px 0;margin:4px auto 0;white-space:nowrap}
+  .birthday-room--restored .scene-title p{font-size:12px;line-height:1.2;margin-top:3px}
+  .birthday-room--restored .scene-bottom{grid-template-columns:minmax(0,1.05fr) minmax(0,1fr);gap:8px;margin-top:16px;padding:8px 10px 10px;min-height:76px}
+  .birthday-room--restored .scene-welcome{font-size:13px;line-height:1.2}
+  .birthday-room--restored .scene-welcome small{font-size:9px}
+  .birthday-room--restored .scene-bottom>a{font-size:12px;gap:4px}
+  .birthday-room--restored .scene-bottom>a>svg:last-child{display:none}
+}
