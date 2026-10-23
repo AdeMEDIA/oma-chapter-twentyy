@@ -95,7 +95,7 @@ export default function WelcomeExperience({ closing, onEnter, onClosed }) {
       <div className="welcome-monogram" aria-hidden="true"><span>XX</span></div>
       <h1 id="welcome-title"><span>Welcome to</span>{' '}Chapter <em>Twenty</em></h1>
       <div className="welcome-rule" aria-hidden="true" />
-      <p id="welcome-copy">For the full experience, turn on the music<br className="welcome-copy-break" /> and step into her world.</p>
+      <p id="welcome-copy">For the full experience, turn on the music<br className="welcome-copy-break" /> and step into your world.</p>
       <div className="welcome-actions">
         <button ref={enterButton} type="button" className="welcome-enter" disabled={closing} onClick={() => startEntrance(true)}><Icon name="music" size={18} /><span>Enter with music</span><Icon name="arrowRight" size={18} /></button>
         <button type="button" className="welcome-quiet" disabled={closing} onClick={() => startEntrance(false)}><Icon name="volumeOff" size={16} /><span>Continue quietly</span></button>
