@@ -14,8 +14,13 @@
 .birthday-room--restored .room-instruction{margin:0;padding:17px 15px;background:#f7efe2;color:#76583f;font-size:11px;line-height:1.7;text-align:center}
 .birthday-room--restored .spot-cake{top:60.6%}
 @media(min-width:1001px){
-  /* Fit the complete scene above the instruction, including on ultrawide
-     monitors and shorter browser windows. Labels share the artwork canvas. */
+  .birthday-room--restored .scene-title{left:54%;top:8.5%}
+  .birthday-room--restored .scene-title>span{font-size:clamp(35px,4vw,65px)}
+  .birthday-room--restored .room-film-link{left:37%;top:28%;right:auto;font-size:14px}
+}
+@media(min-width:1921px) and (hover:hover) and (pointer:fine){
+  /* Height fitting belongs to wide desktop screens. Landscape tablets keep
+     the original edge-to-edge room, even above the desktop layout breakpoint. */
   .room-focused{--room-desktop-width:calc((100svh - 56px) * 1672 / 941);max-width:none;background:#f7efe2}
   .room-focused .birthday-header{width:100%;max-width:var(--room-desktop-width);margin-inline:auto}
   .birthday-room--restored{background:#f7efe2}
@@ -23,11 +28,9 @@
   .birthday-room--restored .room-stage.photographic-room{max-width:var(--room-desktop-width);margin-inline:auto;container-type:inline-size}
   .birthday-room--restored .birthday-room__collection{max-width:1920px;margin-inline:auto;padding-inline:min(6%,115.2px)}
   .room-focused .birthday-footer{max-width:1920px;margin-inline:auto;padding-left:min(6%,115.2px);padding-right:max(140px,min(10%,192px))}
-  .birthday-room--restored .scene-title{left:54%;top:8.5%}
   .birthday-room--restored .scene-title>span{font-size:clamp(35px,4cqw,65px)}
   .birthday-room--restored .scene-title h1{font-size:clamp(12px,1.15cqw,20px)}
   .birthday-room--restored .scene-title p{font-size:clamp(13px,1.2cqw,22px)}
-  .birthday-room--restored .room-film-link{left:37%;top:28%;right:auto;font-size:14px}
 }
 @media(min-width:600px) and (max-width:1000px){
   .birthday-room--restored .room-hotspot{font-size:14px;gap:7px;padding:8px 11px}
