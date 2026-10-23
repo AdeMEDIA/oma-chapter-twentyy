@@ -1,0 +1,541 @@
+{
+  "full": {
+    "musicStart": 0,
+    "musicVolume": 0.9,
+    "audioFadeIn": 1,
+    "audioFadeOut": 3,
+    "transitionDuration": 0.22,
+    "segments": [
+      {
+        "id": "opening-reveal",
+        "duration": 2,
+        "fadeOut": 0
+      },
+      {
+        "id": "opening",
+        "duration": 5,
+        "motion": "push",
+        "fadeIn": 0,
+        "fadeOut": 0.35
+      },
+      {
+        "id": "welcome-arrive",
+        "duration": 1.6,
+        "fadeOut": 0
+      },
+      {
+        "id": "welcome",
+        "duration": 4.6,
+        "motion": "push",
+        "fadeIn": 0,
+        "fadeOut": 0
+      },
+      {
+        "id": "welcome-enter",
+        "duration": 0.8,
+        "fadeIn": 0,
+        "fadeOut": 0
+      },
+      {
+        "id": "room-cinema",
+        "duration": 6,
+        "motion": "push"
+      },
+      {
+        "id": "room-drift",
+        "duration": 2,
+        "fadeIn": 0,
+        "fadeOut": 0
+      },
+      {
+        "id": "room-interface",
+        "duration": 4,
+        "motion": "push"
+      },
+      {
+        "id": "collection",
+        "duration": 3,
+        "motion": "push"
+      },
+      {
+        "id": "book-cover",
+        "duration": 3,
+        "motion": "push",
+        "fadeOut": 0
+      },
+      {
+        "id": "book-opening",
+        "duration": 1.25,
+        "fadeIn": 0,
+        "fadeOut": 0
+      },
+      {
+        "id": "book-leaf-1",
+        "duration": 3,
+        "chapter": 1,
+        "fadeIn": 0,
+        "fadeOut": 0
+      },
+      {
+        "id": "book-turn-1",
+        "duration": 0.8,
+        "fadeIn": 0,
+        "fadeOut": 0,
+        "chapter": 1
+      },
+      {
+        "id": "book-leaf-2",
+        "duration": 2.8,
+        "chapter": 1,
+        "fadeIn": 0,
+        "fadeOut": 0
+      },
+      {
+        "id": "book-turn-2",
+        "duration": 0.8,
+        "fadeIn": 0,
+        "fadeOut": 0,
+        "chapter": 1
+      },
+      {
+        "id": "book-leaf-3",
+        "duration": 1.5,
+        "chapter": 2,
+        "fadeIn": 0,
+        "fadeOut": 0
+      },
+      {
+        "id": "book-turn-3",
+        "duration": 0.8,
+        "fadeIn": 0,
+        "fadeOut": 0,
+        "chapter": 2
+      },
+      {
+        "id": "book-leaf-4",
+        "duration": 3,
+        "chapter": 2,
+        "fadeIn": 0,
+        "fadeOut": 0
+      },
+      {
+        "id": "book-turn-4",
+        "duration": 0.8,
+        "fadeIn": 0,
+        "fadeOut": 0,
+        "chapter": 2
+      },
+      {
+        "id": "book-leaf-5",
+        "duration": 3,
+        "chapter": 3,
+        "fadeIn": 0,
+        "fadeOut": 0
+      },
+      {
+        "id": "book-turn-5",
+        "duration": 0.8,
+        "fadeIn": 0,
+        "fadeOut": 0,
+        "chapter": 3
+      },
+      {
+        "id": "book-leaf-6",
+        "duration": 3,
+        "chapter": 3,
+        "fadeIn": 0,
+        "fadeOut": 0
+      },
+      {
+        "id": "book-turn-6",
+        "duration": 0.8,
+        "fadeIn": 0,
+        "fadeOut": 0,
+        "chapter": 3
+      },
+      {
+        "id": "book-leaf-7",
+        "duration": 1.5,
+        "chapter": 4,
+        "fadeIn": 0,
+        "fadeOut": 0
+      },
+      {
+        "id": "book-turn-7",
+        "duration": 0.8,
+        "fadeIn": 0,
+        "fadeOut": 0,
+        "chapter": 4
+      },
+      {
+        "id": "book-leaf-8",
+        "duration": 1.5,
+        "chapter": 4,
+        "fadeIn": 0,
+        "fadeOut": 0
+      },
+      {
+        "id": "book-turn-8",
+        "duration": 0.8,
+        "fadeIn": 0,
+        "fadeOut": 0,
+        "chapter": 4
+      },
+      {
+        "id": "book-leaf-9",
+        "duration": 3.5,
+        "chapter": 5,
+        "fadeIn": 0,
+        "fadeOut": 0
+      },
+      {
+        "id": "book-turn-9",
+        "duration": 0.8,
+        "fadeIn": 0,
+        "fadeOut": 0,
+        "chapter": 5
+      },
+      {
+        "id": "book-leaf-10",
+        "duration": 3.5,
+        "chapter": 5,
+        "fadeIn": 0,
+        "fadeOut": 0.25
+      },
+      {
+        "id": "letters-collection",
+        "duration": 3,
+        "motion": "push"
+      },
+      {
+        "id": "letter-1-start",
+        "duration": 3.3,
+        "fadeOut": 0,
+        "letter": 1
+      },
+      {
+        "id": "letter-1-scroll",
+        "duration": 2.4,
+        "fadeIn": 0,
+        "fadeOut": 0,
+        "letter": 1
+      },
+      {
+        "id": "letter-1-end",
+        "duration": 2.8,
+        "fadeIn": 0,
+        "letter": 1
+      },
+      {
+        "id": "letter-2-start",
+        "duration": 3.3,
+        "fadeOut": 0,
+        "letter": 2
+      },
+      {
+        "id": "letter-2-scroll",
+        "duration": 2.4,
+        "fadeIn": 0,
+        "fadeOut": 0,
+        "letter": 2
+      },
+      {
+        "id": "letter-2-end",
+        "duration": 2.8,
+        "fadeIn": 0,
+        "letter": 2
+      },
+      {
+        "id": "letter-3-start",
+        "duration": 3.3,
+        "fadeOut": 0,
+        "letter": 3
+      },
+      {
+        "id": "letter-3-scroll",
+        "duration": 2.4,
+        "fadeIn": 0,
+        "fadeOut": 0,
+        "letter": 3
+      },
+      {
+        "id": "letter-3-end",
+        "duration": 2.8,
+        "fadeIn": 0,
+        "letter": 3
+      },
+      {
+        "id": "letter-4-start",
+        "duration": 3.3,
+        "fadeOut": 0,
+        "letter": 4
+      },
+      {
+        "id": "letter-4-scroll",
+        "duration": 2.4,
+        "fadeIn": 0,
+        "fadeOut": 0,
+        "letter": 4
+      },
+      {
+        "id": "letter-4-end",
+        "duration": 2.8,
+        "fadeIn": 0,
+        "letter": 4
+      },
+      {
+        "id": "portrait",
+        "duration": 4,
+        "motion": "push"
+      },
+      {
+        "id": "portrait-laugh",
+        "duration": 4,
+        "motion": "push"
+      },
+      {
+        "id": "portrait-notes",
+        "duration": 5,
+        "motion": "push"
+      },
+      {
+        "id": "film-highlight",
+        "duration": 12,
+        "label": "Oma, on Film — original uncropped highlight"
+      },
+      {
+        "id": "cake-lit",
+        "duration": 3,
+        "fadeOut": 0
+      },
+      {
+        "id": "cake-flame",
+        "duration": 1.5,
+        "fadeIn": 0,
+        "fadeOut": 0
+      },
+      {
+        "id": "cake-blow",
+        "duration": 3.2,
+        "fadeIn": 0,
+        "fadeOut": 0
+      },
+      {
+        "id": "cake-celebration",
+        "duration": 3.3,
+        "motion": "push",
+        "fadeIn": 0
+      },
+      {
+        "id": "wishes-intro",
+        "duration": 3,
+        "motion": "push"
+      },
+      {
+        "id": "wishes-collection",
+        "duration": 4,
+        "motion": "push"
+      },
+      {
+        "id": "wish-letter",
+        "duration": 5,
+        "motion": "push"
+      },
+      {
+        "id": "little-notes",
+        "duration": 3,
+        "motion": "push"
+      },
+      {
+        "id": "little-note-open",
+        "duration": 4,
+        "motion": "push"
+      },
+      {
+        "id": "closing-reveal",
+        "duration": 2,
+        "fadeOut": 0
+      },
+      {
+        "id": "closing",
+        "duration": 9.25,
+        "motion": "push",
+        "fadeIn": 0,
+        "fadeOut": 1.2
+      }
+    ]
+  },
+  "reel": {
+    "musicStart": 32.183,
+    "musicVolume": 0.9,
+    "audioFadeIn": 0.3,
+    "audioFadeOut": 1.4,
+    "transitionDuration": 0.15,
+    "beatPeriod": 0.534045,
+    "beatAlignment": "Measured local audio pulse; major held-scene boundaries, original-speed interaction footage.",
+    "segments": [
+      {
+        "id": "opening-reveal",
+        "duration": 2,
+        "fadeOut": 0
+      },
+      {
+        "id": "opening",
+        "duration": 1.2,
+        "motion": "push",
+        "fadeIn": 0
+      },
+      {
+        "id": "welcome-arrive",
+        "duration": 1.6,
+        "fadeOut": 0
+      },
+      {
+        "id": "welcome",
+        "duration": 1.6166666666666667,
+        "motion": "push",
+        "fadeIn": 0
+      },
+      {
+        "id": "room-cinema",
+        "duration": 4,
+        "motion": "push"
+      },
+      {
+        "id": "room-interface",
+        "duration": 1.8666666666666667,
+        "motion": "push"
+      },
+      {
+        "id": "book-cover",
+        "duration": 1.2,
+        "motion": "push",
+        "fadeOut": 0
+      },
+      {
+        "id": "book-opening",
+        "duration": 1.25,
+        "fadeIn": 0,
+        "fadeOut": 0
+      },
+      {
+        "id": "book-leaf-1",
+        "duration": 1.55,
+        "fadeIn": 0,
+        "fadeOut": 0
+      },
+      {
+        "id": "book-turn-1",
+        "duration": 0.8,
+        "fadeIn": 0,
+        "fadeOut": 0
+      },
+      {
+        "id": "book-leaf-2",
+        "duration": 1.2,
+        "fadeIn": 0
+      },
+      {
+        "id": "book-leaf-4",
+        "duration": 1.7,
+        "fadeOut": 0
+      },
+      {
+        "id": "book-turn-4",
+        "duration": 0.8,
+        "fadeIn": 0,
+        "fadeOut": 0
+      },
+      {
+        "id": "book-leaf-5",
+        "duration": 1.3,
+        "motion": "push",
+        "fadeIn": 0
+      },
+      {
+        "id": "book-leaf-6",
+        "duration": 1.5,
+        "motion": "push"
+      },
+      {
+        "id": "book-leaf-9",
+        "duration": 1.5166666666666666,
+        "motion": "push"
+      },
+      {
+        "id": "letters-collection",
+        "duration": 1.5,
+        "motion": "push"
+      },
+      {
+        "id": "letter-1-start",
+        "duration": 2,
+        "motion": "push"
+      },
+      {
+        "id": "letter-3-scroll",
+        "duration": 2.4
+      },
+      {
+        "id": "letter-4-end",
+        "duration": 1.05,
+        "motion": "push"
+      },
+      {
+        "id": "portrait",
+        "duration": 3,
+        "motion": "push"
+      },
+      {
+        "id": "portrait-laugh",
+        "duration": 1.8,
+        "motion": "push"
+      },
+      {
+        "id": "film-highlight",
+        "duration": 7,
+        "start": 1
+      },
+      {
+        "id": "cake-flame",
+        "duration": 1.5,
+        "fadeIn": 0,
+        "fadeOut": 0
+      },
+      {
+        "id": "cake-blow",
+        "duration": 3.2,
+        "fadeIn": 0,
+        "fadeOut": 0
+      },
+      {
+        "id": "cake-celebration",
+        "duration": 2.183333333333333,
+        "motion": "push",
+        "fadeIn": 0
+      },
+      {
+        "id": "wishes-collection",
+        "duration": 1.5,
+        "motion": "push"
+      },
+      {
+        "id": "little-note-open",
+        "duration": 1.7,
+        "motion": "push"
+      },
+      {
+        "id": "closing-reveal",
+        "duration": 2,
+        "fadeOut": 0
+      },
+      {
+        "id": "closing",
+        "duration": 4.066666666666666,
+        "motion": "push",
+        "fadeIn": 0,
+        "fadeOut": 0.8
+      }
+    ]
+  }
+}

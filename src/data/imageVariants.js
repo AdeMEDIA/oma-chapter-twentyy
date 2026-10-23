@@ -44,5 +44,20 @@ export const imageVariants = {
     "width": 812,
     "height": 1280,
     "srcSet": "/images/responsive/us-purple-mirror-320.webp 320w, /images/responsive/us-purple-mirror-640.webp 640w, /images/responsive/us-purple-mirror-812.webp 812w"
+  },
+  "/images/scrapbook/us-formal-mirror.webp": {
+    "width": 1042,
+    "height": 1280,
+    "srcSet": "/images/responsive/us-formal-mirror-320.webp 320w, /images/responsive/us-formal-mirror-640.webp 640w, /images/responsive/us-formal-mirror-1042.webp 1042w"
+  },
+  "/images/scrapbook/oma-striped-sweater-seated.webp": {
+    "width": 1007,
+    "height": 1280,
+    "srcSet": "/images/responsive/oma-striped-sweater-seated-320.webp 320w, /images/responsive/oma-striped-sweater-seated-640.webp 640w, /images/responsive/oma-striped-sweater-seated-1007.webp 1007w"
+  },
+  "/images/scrapbook/oma-striped-sweater-closeup.webp": {
+    "width": 961,
+    "height": 1280,
+    "srcSet": "/images/responsive/oma-striped-sweater-closeup-320.webp 320w, /images/responsive/oma-striped-sweater-closeup-640.webp 640w, /images/responsive/oma-striped-sweater-closeup-961.webp 961w"
   }
 };

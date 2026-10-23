@@ -55,6 +55,16 @@
 .memory-flip:disabled{opacity:.25;cursor:default}
 .memory-flip:hover:not(:disabled){color:#65243a}
 .memory-flip:hover:not(:disabled)::before{background:linear-gradient(135deg,#b6956588,#fffbee 50%,#cdb28b)}
+.memory-leaf--noted{grid-template-rows:64px minmax(0,1fr);gap:12px}
+.memory-leaf-body{--note-height:100px;--photo-height:calc(var(--leaf-height) - 338px);display:grid;grid-template-columns:minmax(0,1fr);grid-template-rows:minmax(0,1fr) var(--note-height);gap:12px;align-items:center;justify-items:center;min-width:0;min-height:0;height:100%}
+.memory-page-caption{margin:0;max-width:100%;font-family:var(--serif);font-size:21px;font-style:italic;font-weight:400;line-height:1.45;text-align:center;text-wrap:pretty;overflow-wrap:break-word;color:#795044}
+.note-upper .memory-leaf-body{grid-template-rows:var(--note-height) minmax(0,1fr)}
+.note-upper .memory-page-caption{order:-1}
+.note-middle .memory-leaf-body{--photo-height:320px;grid-template-columns:minmax(0,1.1fr) minmax(0,.9fr);grid-template-rows:minmax(0,1fr);gap:16px}
+.note-middle .memory-photo{max-width:100%}
+.note-middle .memory-page-caption{text-align:left}
+.memory-right.note-middle .memory-leaf-body{grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr)}
+.memory-right.note-middle .memory-page-caption{order:-1}
 .memory-progress{max-width:1040px;margin:26px auto 0;display:flex;align-items:center;justify-content:space-between;gap:16px}
 .memory-chapter-status{font-size:12px;color:#74543f;line-height:1.7;font-variant-numeric:tabular-nums}
 .memory-chapter-status small{display:block;color:#795d47;font-size:10px;line-height:1.7}
@@ -107,7 +117,7 @@
   .cover-name{font-size:60px}
   .cover-ornament{margin-top:20px}
   .cover-open-button{margin-top:25px}
-  .memory-book{--leaf-height:clamp(390px,calc(100svh - 240px),560px);--photo-height:calc(var(--leaf-height) - 198px);--turn-duration:560ms;border-width:7px;perspective:1400px;overflow:hidden;border-radius:6px 12px 12px 6px}
+  .memory-book{--leaf-height:clamp(480px,calc(100svh - 240px),560px);--photo-height:calc(var(--leaf-height) - 198px);--turn-duration:560ms;border-width:7px;perspective:1400px;overflow:hidden;border-radius:6px 12px 12px 6px}
   .memory-spread,.memory-spread--single{grid-template-columns:minmax(0,1fr)}
   .memory-leaf{height:var(--leaf-height);padding:20px 23px 55px;grid-template-rows:82px minmax(0,1fr);gap:10px}
   .memory-left,.memory-right{border:0;box-shadow:inset 12px 0 18px -18px #53301d88,inset -2px 0 5px #b59a6c15}
@@ -126,6 +136,12 @@
   .memory-flip--previous{left:6px}
   .memory-flip--next{right:6px}
   .memory-progress{max-width:414px;margin-top:19px;flex-direction:column;gap:4px;text-align:center}
+  .memory-leaf--noted{grid-template-rows:60px minmax(0,1fr);gap:10px}
+  .memory-leaf-body{--note-height:104px;--photo-height:calc(var(--leaf-height) - 310px);gap:10px}
+  .memory-page-caption{font-size:18px;line-height:1.4}
+  .note-middle .memory-leaf-body,.memory-right.note-middle .memory-leaf-body{--photo-height:calc(var(--leaf-height) - 310px);grid-template-columns:minmax(0,1fr);grid-template-rows:var(--note-height) minmax(0,1fr);gap:10px}
+  .note-middle .memory-page-caption{order:-1;text-align:center}
+  .note-middle .memory-photo{max-width:86%}
   .memory-chapter-status{font-size:11px}
   .memory-chapter-status small{display:inline;margin-left:9px;font-size:10px}
   .memory-chapters{gap:3px}
@@ -164,12 +180,13 @@
   .memory-viewing-note p{font-size:11px}
 }
 @media(max-width:1000px) and (max-height:500px){
-  .memory-book{--leaf-height:clamp(320px,calc(100svh - 42px),390px);--photo-height:calc(var(--leaf-height) - 165px)}
+  .memory-book{--leaf-height:440px;--photo-height:calc(var(--leaf-height) - 165px)}
   .memory-leaf{padding-top:14px;padding-bottom:50px;grid-template-rows:58px minmax(0,1fr);gap:8px}
   .memory-leaf-heading,.memory-right .memory-leaf-heading{gap:6px}
   .memory-leaf h2,.memory-right h2{font-size:24px}
   .memory-date{font-size:7px;letter-spacing:1.1px}
   .memory-photo figcaption{font-size:16px;margin-top:9px}
+  .memory-leaf-body,.note-middle .memory-leaf-body,.memory-right.note-middle .memory-leaf-body{--photo-height:150px}
 }
 @media(prefers-reduced-motion:reduce){
   .memory-cover,.memory-turn,.memory-spread,.memory-photo,.turn-face,.turn-face::after{animation:none!important;transition:none!important}

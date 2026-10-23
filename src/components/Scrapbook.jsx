@@ -26,13 +26,28 @@ function Photo({ image, aspect, alt, placeholder, caption }) {
   </figure>;
 }
 
+function splitChapterCaption(spread) {
+  const text = spread.description || '';
+  const marker = spread.descriptionSplitAfter;
+  const markerStart = marker ? text.indexOf(marker) : -1;
+  // A future caption edit still keeps every word, even if its split marker changes.
+  const fallback = text.indexOf(' ', Math.floor(text.length / 2));
+  const split = markerStart >= 0 ? markerStart + marker.length : fallback >= 0 ? fallback : text.length;
+  return [text.slice(0, split).trim(), text.slice(split).trim()];
+}
+
 function Leaf({ index, side }) {
   const spread = spreads[index];
   const left = side === 'left';
   const image = left ? spread.image : spread.image2;
-  return <div className={`memory-leaf memory-${side} layout-${index % 3}`} data-chapter={index + 1} data-side={side}>
+  const note = splitChapterCaption(spread)[left ? 0 : 1];
+  const notePosition = spread.notePositions?.[left ? 0 : 1] || 'lower';
+  return <div className={`memory-leaf memory-${side} layout-${index % 3}${note ? ` memory-leaf--noted note-${notePosition}` : ''}`} data-chapter={index + 1} data-side={side}>
     <header className="memory-leaf-heading"><span className="memory-date">CHAPTER {String(index + 1).padStart(2, '0')}</span><h2>{spread.title}</h2></header>
-    <Photo key={`${spread.id}-${side}-${image || 'reserved'}`} image={image} aspect={left ? spread.imageAspect : spread.image2Aspect} alt={left ? spread.imageAlt : spread.image2Alt} placeholder={left ? spread.imagePlaceholder : spread.image2Placeholder} caption={left ? spread.caption : spread.caption2} />
+    <div className="memory-leaf-body">
+      <Photo key={`${spread.id}-${side}-${image || 'reserved'}`} image={image} aspect={left ? spread.imageAspect : spread.image2Aspect} alt={left ? spread.imageAlt : spread.image2Alt} placeholder={left ? spread.imagePlaceholder : spread.image2Placeholder} caption={left ? spread.caption : spread.caption2} />
+      {note && <p className="memory-page-caption">{note}</p>}
+    </div>
     <span className="memory-page-number">{String(index * 2 + (side === 'left' ? 1 : 2)).padStart(2, '0')}</span>
   </div>;
 }
